@@ -8,12 +8,13 @@
 
 import UIKit
 
-class SplashView: UIViewController {
+class SplashView: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // start animating the indicator, then make connection to get recent released books
+        server!.requestTopFreeApplications(onDelegate: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +22,30 @@ class SplashView: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK:- Get Books By categoryId api CONNECTIONS
+    
+    func successResponeTopFreeAppsApi(withFeed feed: Feed?) {
+        
+        // add the new returned category books to categoryBooksList array,
+        // arrayCategoriesBooks = categoryBooksList!
+        
+        
+        // update UI
+        //collectionViewCategoriesBooks.reloadData()
+        
+        // hide indicator.
+        //nactivityIndCategoriesBooks.stopAnimating()
+        
+        
     }
-    */
+    
+    func failResponseTopFreeAppsApi(withMessage message: String?) {
+        
+        //notify user
+        //Utils.showAlertDialogInView(self, withTilte: "Info", andMessage: message, andButtonTitle: "OK")
+        
+        // hide indicator
+        //activityIndCategoriesBooks.stopAnimating()
+    }
 
 }

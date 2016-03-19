@@ -46,6 +46,15 @@
 		844A6B691C9D7E11007B4DAF /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B4A1C9D7E11007B4DAF /* UIImageView+UIActivityIndicatorForSDWebImage.m */; };
 		844A6B6B1C9D7F42007B4DAF /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B6A1C9D7F42007B4DAF /* SplashView.swift */; };
 		844A6B6D1C9D8021007B4DAF /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844A6B6C1C9D8021007B4DAF /* logo.jpg */; };
+		844A6B731C9D9F64007B4DAF /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B721C9D9F64007B4DAF /* AppConstants.swift */; };
+		844A6B771C9DA1FB007B4DAF /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B761C9DA1FB007B4DAF /* BaseModel.m */; };
+		844A6B7B1C9DA8AE007B4DAF /* TopFreeAppsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B7A1C9DA8AE007B4DAF /* TopFreeAppsResponse.m */; };
+		844A6B831C9DAD01007B4DAF /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B821C9DAD01007B4DAF /* Feed.m */; };
+		844A6B871C9DAF60007B4DAF /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B861C9DAF60007B4DAF /* Entry.m */; };
+		844A6B891C9DD374007B4DAF /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B881C9DD374007B4DAF /* Server.swift */; };
+		844A6B8C1C9DE0F1007B4DAF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B8B1C9DE0F1007B4DAF /* BaseViewController.swift */; };
+		844A6B8F1C9DE16C007B4DAF /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B8E1C9DE16C007B4DAF /* SharedData.swift */; };
+		844A6B931C9DF0C7007B4DAF /* Link.m in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B921C9DF0C7007B4DAF /* Link.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +149,21 @@
 		844A6B4A1C9D7E11007B4DAF /* UIImageView+UIActivityIndicatorForSDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIActivityIndicatorForSDWebImage.m"; sourceTree = "<group>"; };
 		844A6B6A1C9D7F42007B4DAF /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		844A6B6C1C9D8021007B4DAF /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
+		844A6B711C9D9F3B007B4DAF /* Grability-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Grability-Bridging-Header.h"; sourceTree = "<group>"; };
+		844A6B721C9D9F64007B4DAF /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		844A6B751C9DA1FB007B4DAF /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		844A6B761C9DA1FB007B4DAF /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		844A6B791C9DA8AE007B4DAF /* TopFreeAppsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopFreeAppsResponse.h; sourceTree = "<group>"; };
+		844A6B7A1C9DA8AE007B4DAF /* TopFreeAppsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopFreeAppsResponse.m; sourceTree = "<group>"; };
+		844A6B811C9DAD01007B4DAF /* Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
+		844A6B821C9DAD01007B4DAF /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
+		844A6B851C9DAF60007B4DAF /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		844A6B861C9DAF60007B4DAF /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		844A6B881C9DD374007B4DAF /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		844A6B8B1C9DE0F1007B4DAF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		844A6B8E1C9DE16C007B4DAF /* SharedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
+		844A6B911C9DF0C7007B4DAF /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
+		844A6B921C9DF0C7007B4DAF /* Link.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Link.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,10 +255,9 @@
 		844A6AFE1C9D7CCD007B4DAF /* ServerConnections */ = {
 			isa = PBXGroup;
 			children = (
-				844A6B021C9D7D1B007B4DAF /* Responses */,
-				844A6B011C9D7CFC007B4DAF /* RequestConnection */,
-				844A6B001C9D7CEC007B4DAF /* Models */,
 				844A6AFF1C9D7CDA007B4DAF /* Server */,
+				844A6B021C9D7D1B007B4DAF /* Responses */,
+				844A6B001C9D7CEC007B4DAF /* Models */,
 			);
 			path = ServerConnections;
 			sourceTree = "<group>";
@@ -242,6 +265,7 @@
 		844A6AFF1C9D7CDA007B4DAF /* Server */ = {
 			isa = PBXGroup;
 			children = (
+				844A6B881C9DD374007B4DAF /* Server.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -249,20 +273,19 @@
 		844A6B001C9D7CEC007B4DAF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				844A6B901C9DF0B8007B4DAF /* Link */,
+				844A6B841C9DAF48007B4DAF /* Entry */,
+				844A6B801C9DAD01007B4DAF /* Feed */,
+				844A6B8D1C9DE151007B4DAF /* SharedData */,
+				844A6B741C9DA1D9007B4DAF /* BaseModel */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		844A6B011C9D7CFC007B4DAF /* RequestConnection */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RequestConnection;
 			sourceTree = "<group>";
 		};
 		844A6B021C9D7D1B007B4DAF /* Responses */ = {
 			isa = PBXGroup;
 			children = (
+				844A6B781C9DA897007B4DAF /* TopFreeAppsResponse */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -270,6 +293,7 @@
 		844A6B031C9D7D3B007B4DAF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				844A6B8A1C9DE0C9007B4DAF /* BaseViewController */,
 				844A6B041C9D7D56007B4DAF /* SplashView */,
 			);
 			path = ViewControllers;
@@ -286,6 +310,7 @@
 		844A6B051C9D7D83007B4DAF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				844A6B701C9D9EFD007B4DAF /* HelperFiles */,
 				844A6B071C9D7D9B007B4DAF /* Images */,
 				844A6B061C9D7D8F007B4DAF /* Libs */,
 			);
@@ -421,6 +446,76 @@
 				844A6B471C9D7E11007B4DAF /* UIView+WebCacheOperation.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		844A6B701C9D9EFD007B4DAF /* HelperFiles */ = {
+			isa = PBXGroup;
+			children = (
+				844A6B721C9D9F64007B4DAF /* AppConstants.swift */,
+				844A6B711C9D9F3B007B4DAF /* Grability-Bridging-Header.h */,
+			);
+			path = HelperFiles;
+			sourceTree = "<group>";
+		};
+		844A6B741C9DA1D9007B4DAF /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				844A6B751C9DA1FB007B4DAF /* BaseModel.h */,
+				844A6B761C9DA1FB007B4DAF /* BaseModel.m */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		844A6B781C9DA897007B4DAF /* TopFreeAppsResponse */ = {
+			isa = PBXGroup;
+			children = (
+				844A6B791C9DA8AE007B4DAF /* TopFreeAppsResponse.h */,
+				844A6B7A1C9DA8AE007B4DAF /* TopFreeAppsResponse.m */,
+			);
+			path = TopFreeAppsResponse;
+			sourceTree = "<group>";
+		};
+		844A6B801C9DAD01007B4DAF /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				844A6B811C9DAD01007B4DAF /* Feed.h */,
+				844A6B821C9DAD01007B4DAF /* Feed.m */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		844A6B841C9DAF48007B4DAF /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				844A6B851C9DAF60007B4DAF /* Entry.h */,
+				844A6B861C9DAF60007B4DAF /* Entry.m */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
+		844A6B8A1C9DE0C9007B4DAF /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				844A6B8B1C9DE0F1007B4DAF /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		844A6B8D1C9DE151007B4DAF /* SharedData */ = {
+			isa = PBXGroup;
+			children = (
+				844A6B8E1C9DE16C007B4DAF /* SharedData.swift */,
+			);
+			path = SharedData;
+			sourceTree = "<group>";
+		};
+		844A6B901C9DF0B8007B4DAF /* Link */ = {
+			isa = PBXGroup;
+			children = (
+				844A6B911C9DF0C7007B4DAF /* Link.h */,
+				844A6B921C9DF0C7007B4DAF /* Link.m */,
+			);
+			path = Link;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -564,6 +659,7 @@
 				844A6B501C9D7E11007B4DAF /* JSONAPI.m in Sources */,
 				844A6B4C1C9D7E11007B4DAF /* JSONModelArray.m in Sources */,
 				844A6B641C9D7E11007B4DAF /* UIImage+WebP.m in Sources */,
+				844A6B771C9DA1FB007B4DAF /* BaseModel.m in Sources */,
 				844A6B4D1C9D7E11007B4DAF /* JSONModelClassProperty.m in Sources */,
 				844A6B611C9D7E11007B4DAF /* UIButton+WebCache.m in Sources */,
 				844A6B5E1C9D7E11007B4DAF /* SDWebImageDownloaderOperation.m in Sources */,
@@ -571,11 +667,17 @@
 				844A6B691C9D7E11007B4DAF /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */,
 				844A6B5A1C9D7E11007B4DAF /* SDImageCache.m in Sources */,
 				844A6B591C9D7E11007B4DAF /* NSData+ImageContentType.m in Sources */,
+				844A6B8C1C9DE0F1007B4DAF /* BaseViewController.swift in Sources */,
+				844A6B871C9DAF60007B4DAF /* Entry.m in Sources */,
+				844A6B931C9DF0C7007B4DAF /* Link.m in Sources */,
+				844A6B731C9D9F64007B4DAF /* AppConstants.swift in Sources */,
 				844A6B531C9D7E11007B4DAF /* JSONKeyMapper.m in Sources */,
 				844A6B5C1C9D7E11007B4DAF /* SDWebImageDecoder.m in Sources */,
+				844A6B8F1C9DE16C007B4DAF /* SharedData.swift in Sources */,
 				844A6B521C9D7E11007B4DAF /* JSONModel+networking.m in Sources */,
 				844A6B651C9D7E11007B4DAF /* UIImageView+HighlightedWebCache.m in Sources */,
 				844A6B571C9D7E11007B4DAF /* README.md in Sources */,
+				844A6B7B1C9DA8AE007B4DAF /* TopFreeAppsResponse.m in Sources */,
 				844A6B5D1C9D7E11007B4DAF /* SDWebImageDownloader.m in Sources */,
 				844A6B5B1C9D7E11007B4DAF /* SDWebImageCompat.m in Sources */,
 				844A6B6B1C9D7F42007B4DAF /* SplashView.swift in Sources */,
@@ -587,9 +689,11 @@
 				844A6B4E1C9D7E11007B4DAF /* JSONModelError.m in Sources */,
 				844A6B581C9D7E11007B4DAF /* MKAnnotationView+WebCache.m in Sources */,
 				844A6B661C9D7E11007B4DAF /* UIImageView+WebCache.m in Sources */,
+				844A6B831C9DAD01007B4DAF /* Feed.m in Sources */,
 				844A6B671C9D7E11007B4DAF /* UIView+WebCacheOperation.m in Sources */,
 				844A6B5F1C9D7E11007B4DAF /* SDWebImageManager.m in Sources */,
 				844A6B4F1C9D7E11007B4DAF /* NSArray+JSONModel.m in Sources */,
+				844A6B891C9DD374007B4DAF /* Server.swift in Sources */,
 				844A6B4B1C9D7E11007B4DAF /* JSONModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -736,6 +840,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iOS-Developer14.Grability";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Volumes/iDisk2/Travel In Shaa Allah/Interview/Grability/task/Grability/Src/Grability/Resources/HelperFiles/Grability-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -747,6 +852,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iOS-Developer14.Grability";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Volumes/iDisk2/Travel In Shaa Allah/Interview/Grability/task/Grability/Src/Grability/Resources/HelperFiles/Grability-Bridging-Header.h";
 			};
 			name = Release;
 		};
