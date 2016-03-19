@@ -45,6 +45,7 @@
 		844A6B681C9D7E11007B4DAF /* UIActivityIndicator-for-SDWebImage.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 844A6B481C9D7E11007B4DAF /* UIActivityIndicator-for-SDWebImage.podspec */; };
 		844A6B691C9D7E11007B4DAF /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B4A1C9D7E11007B4DAF /* UIImageView+UIActivityIndicatorForSDWebImage.m */; };
 		844A6B6B1C9D7F42007B4DAF /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B6A1C9D7F42007B4DAF /* SplashView.swift */; };
+		844A6B6D1C9D8021007B4DAF /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844A6B6C1C9D8021007B4DAF /* logo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,7 @@
 		844A6B491C9D7E11007B4DAF /* UIImageView+UIActivityIndicatorForSDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIActivityIndicatorForSDWebImage.h"; sourceTree = "<group>"; };
 		844A6B4A1C9D7E11007B4DAF /* UIImageView+UIActivityIndicatorForSDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIActivityIndicatorForSDWebImage.m"; sourceTree = "<group>"; };
 		844A6B6A1C9D7F42007B4DAF /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		844A6B6C1C9D8021007B4DAF /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,11 +219,11 @@
 		844A6AFD1C9D7C9C007B4DAF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				844A6ACF1C9D7369007B4DAF /* AppDelegate.swift */,
 				844A6AD31C9D7369007B4DAF /* Main.storyboard */,
-				844A6AD61C9D7369007B4DAF /* Assets.xcassets */,
 				844A6AD81C9D7369007B4DAF /* LaunchScreen.storyboard */,
+				844A6ACF1C9D7369007B4DAF /* AppDelegate.swift */,
 				844A6ADB1C9D7369007B4DAF /* Info.plist */,
+				844A6AD61C9D7369007B4DAF /* Assets.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -302,6 +304,7 @@
 		844A6B071C9D7D9B007B4DAF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				844A6B6C1C9D8021007B4DAF /* logo.jpg */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				844A6ADA1C9D7369007B4DAF /* LaunchScreen.storyboard in Resources */,
 				844A6AD71C9D7369007B4DAF /* Assets.xcassets in Resources */,
 				844A6B561C9D7E11007B4DAF /* LICENSE.txt in Resources */,
+				844A6B6D1C9D8021007B4DAF /* logo.jpg in Resources */,
 				844A6AD51C9D7369007B4DAF /* Main.storyboard in Resources */,
 				844A6B681C9D7E11007B4DAF /* UIActivityIndicator-for-SDWebImage.podspec in Resources */,
 			);
