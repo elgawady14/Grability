@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		844A6AD01C9D7369007B4DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A6ACF1C9D7369007B4DAF /* AppDelegate.swift */; };
-		844A6AD21C9D7369007B4DAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A6AD11C9D7369007B4DAF /* ViewController.swift */; };
 		844A6AD51C9D7369007B4DAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844A6AD31C9D7369007B4DAF /* Main.storyboard */; };
 		844A6AD71C9D7369007B4DAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844A6AD61C9D7369007B4DAF /* Assets.xcassets */; };
 		844A6ADA1C9D7369007B4DAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844A6AD81C9D7369007B4DAF /* LaunchScreen.storyboard */; };
@@ -36,7 +35,6 @@
 /* Begin PBXFileReference section */
 		844A6ACC1C9D7369007B4DAF /* Grability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844A6ACF1C9D7369007B4DAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		844A6AD11C9D7369007B4DAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		844A6AD41C9D7369007B4DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		844A6AD61C9D7369007B4DAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844A6AD91C9D7369007B4DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				844A6ACF1C9D7369007B4DAF /* AppDelegate.swift */,
-				844A6AD11C9D7369007B4DAF /* ViewController.swift */,
 				844A6AD31C9D7369007B4DAF /* Main.storyboard */,
 				844A6AD61C9D7369007B4DAF /* Assets.xcassets */,
 				844A6AD81C9D7369007B4DAF /* LaunchScreen.storyboard */,
@@ -259,7 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844A6AD21C9D7369007B4DAF /* ViewController.swift in Sources */,
 				844A6AD01C9D7369007B4DAF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +483,7 @@
 				844A6AF61C9D7369007B4DAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		844A6AF71C9D7369007B4DAF /* Build configuration list for PBXNativeTarget "GrabilityTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +492,7 @@
 				844A6AF91C9D7369007B4DAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		844A6AFA1C9D7369007B4DAF /* Build configuration list for PBXNativeTarget "GrabilityUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +501,7 @@
 				844A6AFC1C9D7369007B4DAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
