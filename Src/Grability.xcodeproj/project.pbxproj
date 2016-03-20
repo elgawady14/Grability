@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8432FBDC1C9E54D0005E2231 /* RequestConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432FBDB1C9E54D0005E2231 /* RequestConnection.m */; };
 		844A6AD01C9D7369007B4DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A6ACF1C9D7369007B4DAF /* AppDelegate.swift */; };
 		844A6AD51C9D7369007B4DAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844A6AD31C9D7369007B4DAF /* Main.storyboard */; };
 		844A6AD71C9D7369007B4DAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844A6AD61C9D7369007B4DAF /* Assets.xcassets */; };
@@ -75,6 +76,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8432FBDA1C9E54D0005E2231 /* RequestConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestConnection.h; sourceTree = "<group>"; };
+		8432FBDB1C9E54D0005E2231 /* RequestConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestConnection.m; sourceTree = "<group>"; };
 		844A6ACC1C9D7369007B4DAF /* Grability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844A6ACF1C9D7369007B4DAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844A6AD41C9D7369007B4DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -191,6 +194,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8432FBD91C9E54BB005E2231 /* RequestConnection */ = {
+			isa = PBXGroup;
+			children = (
+				8432FBDA1C9E54D0005E2231 /* RequestConnection.h */,
+				8432FBDB1C9E54D0005E2231 /* RequestConnection.m */,
+			);
+			path = RequestConnection;
+			sourceTree = "<group>";
+		};
 		844A6AC31C9D7369007B4DAF = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +267,7 @@
 		844A6AFE1C9D7CCD007B4DAF /* ServerConnections */ = {
 			isa = PBXGroup;
 			children = (
+				8432FBD91C9E54BB005E2231 /* RequestConnection */,
 				844A6AFF1C9D7CDA007B4DAF /* Server */,
 				844A6B021C9D7D1B007B4DAF /* Responses */,
 				844A6B001C9D7CEC007B4DAF /* Models */,
@@ -663,6 +676,7 @@
 				844A6B4D1C9D7E11007B4DAF /* JSONModelClassProperty.m in Sources */,
 				844A6B611C9D7E11007B4DAF /* UIButton+WebCache.m in Sources */,
 				844A6B5E1C9D7E11007B4DAF /* SDWebImageDownloaderOperation.m in Sources */,
+				8432FBDC1C9E54D0005E2231 /* RequestConnection.m in Sources */,
 				844A6AD01C9D7369007B4DAF /* AppDelegate.swift in Sources */,
 				844A6B691C9D7E11007B4DAF /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */,
 				844A6B5A1C9D7E11007B4DAF /* SDImageCache.m in Sources */,

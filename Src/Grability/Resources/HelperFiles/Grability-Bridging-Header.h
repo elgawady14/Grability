@@ -11,6 +11,7 @@
 
 #import "JSONModel+networking.h"
 #import "BaseModel.h"
+#import "RequestConnection.h"
 #import "TopFreeAppsResponse.h"
 #import "Feed.h"
 #import "Entry.h"

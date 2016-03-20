@@ -19,92 +19,57 @@ import UIKit
 
 
 class Server: NSObject {
-    
-    func makeRequestWithApiName(apiName: String!, andResponseClass responseClass: AnyObject!, andParams params: BaseModel?) -> (response: AnyObject?, message: String?)  {
-        
-        let url = API_URL
-        
-        var requestDic: [String : String]? = nil
-        
-        if params != nil {
-           requestDic = [DATA : (params?.toJSONString())!]
-        }
-        
-        print("\(apiName) request started.")
-        
-        print("URL: \(url)")
-        
-        print("Request parameters: \(requestDic)")
-        
-        var data: AnyObject?
-        
-        var message: String?
-        
-        JSONHTTPClient.postJSONFromURLWithString(url, params: requestDic, completion: {(json: AnyObject!, err: JSONModelError?) -> Void in
-            
-            print("\(apiName) request finished.")
-            
-            if json != nil {
-                
-                print("Json: \(json)")
-                data = json as! [String : AnyObject]
-                message = SUCCESS
-            } else {
-                
-                message = err?.description
-                print("Error: \(err)")
-            }
-        })
-        
-        return (data, message)
-    }
-
-    
-    
+ 
     //MARK:- TopFreeApplications Api request, response
     
     func requestTopFreeApplications (onDelegate delegate: AnyObject?){
     
-        let result: (success: Bool, response: TopFreeAppsResponse?, message: String?)
         
-//        #if DEBUG
-//            result = dummyLoginRequest(loginRequest)
-//        #else
+        //#if PRODUCTION
+            
+        requestRemoteTopFreeApplications(onDelegate: delegate!)
+            
+        //#elseif DUMMY
         
-          result = requestRemoteTopFreeApplications()
-//       
-//        #endif
-        
-        
-        if (result.success == true) {
-            let feedObj = result.response?.feed
-            delegate?.successResponeTopFreeAppsApi!(withFeed: feedObj)
-        } else {
-            delegate?.failResponseTopFreeAppsApi!(withMessage: result.message)
-        }
+            /*let result: (success: Bool, response: GetRecentReleasedResponse?, message: String?)
+            result = dummyRecentReleasedRequest(recentReleasedRequest)
+            
+            if (result.success == true) {
+            let recentReleasedList = result.response?.books as? [Book]
+            delegate?.successResponeRecentReleasedApi!(withRecentReleasedList: recentReleasedList)
+            } else {
+            delegate?.failResponseRecentReleased!(withMessage: result.message)
+            }*/
+            
+        //#endif
     }
     
     
-    func requestRemoteTopFreeApplications () -> (success: Bool, response: TopFreeAppsResponse?, message: String?) {
+    func requestRemoteTopFreeApplications (onDelegate delegate: AnyObject?) {
         
-        var jsonResponse: (response: AnyObject?, message: String?)
-
-        jsonResponse = makeRequestWithApiName(TOP_FREE_APPS_API, andResponseClass: TopFreeAppsResponse.classForCoder(), andParams: nil)
-        
-        if jsonResponse.response != nil {
+        RequestConnection.makeRequestWithApiName(API_Name_TOP_FREE_APPS, andResponseClass: TopFreeAppsResponse.classForCoder(), andParams: nil, withHandler: {(response: AnyObject!,apiName: String!,error: String?) -> Void in
             
-            let response = jsonResponse.response as! TopFreeAppsResponse
-            
-            if jsonResponse.response!.message == SUCCESS {
-                return (true, response, jsonResponse.response!.message)
-            } else {
-                return (false, nil, jsonResponse.response!.message)
+            if (apiName == API_Name_TOP_FREE_APPS) {
+                
+                if response != nil {
+                    
+                    let jsonResponse = response as! TopFreeAppsResponse
+                    
+                    if ((error ) == nil) {
+                        let returnedFeed = jsonResponse.feed
+                        delegate?.successResponeTopFreeAppsApi!(withFeed: returnedFeed)
+                    } else {
+                        delegate?.failResponseTopFreeAppsApi!(withMessage: error!)
+                    }
+                    
+                } else {
+                    delegate?.failResponseTopFreeAppsApi!(withMessage: error!)
+                }
             }
             
-        } else {
-            return (false, nil, "Connection Error. something went wrong")
-        }
+        })
     }
+    
     
     /*func dummyLoginRequest (loginRequest: LoginRequest?) -> (success: Bool, response: LoginResponse?, message: String?) {
         

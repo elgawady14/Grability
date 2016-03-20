@@ -16,7 +16,7 @@ let DATA: String = "data"
 
 // API Names
 
-let TOP_FREE_APPS_API: String = "TopFreeApplications"
+let API_Name_TOP_FREE_APPS: String = "TopFreeApplications"
 
 // API MESSAGES
 
