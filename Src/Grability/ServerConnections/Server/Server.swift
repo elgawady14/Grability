@@ -56,8 +56,8 @@ class Server: NSObject {
                     let jsonResponse = response as! TopFreeAppsResponse
                     
                     if ((error ) == nil) {
-                        let returnedFeed = jsonResponse.feed
-                        delegate?.successResponeTopFreeAppsApi!(withFeed: returnedFeed)
+                        
+                        delegate?.successResponeTopFreeAppsApi!(withFeed: jsonResponse.feed)
                     } else {
                         delegate?.failResponseTopFreeAppsApi!(withMessage: error!)
                     }

@@ -59,14 +59,14 @@ class CategoriesView: BaseViewController {
         
         // make each cell bounded and a rounded by a border.
         
-        cell.layer.cornerRadius = 5.0
-        cell.layer.masksToBounds = true
-        cell.layer.borderWidth = 0.3
-        cell.layer.borderColor = UIColor.lightGrayColor().CGColor
+        cell.labelCategoryName.layer.cornerRadius = 5.0
+        cell.labelCategoryName.layer.masksToBounds = true
+        cell.labelCategoryName.layer.borderWidth = 0.3
+        cell.labelCategoryName.layer.borderColor = UIColor.lightGrayColor().CGColor
         
         // category name
         
-        cell.labelCategoryName.text = categoriesList[indexPath.item]
+        cell.labelCategoryName.text = "  " + categoriesList[indexPath.item]
         
         return cell
     }
@@ -88,7 +88,7 @@ class CategoriesView: BaseViewController {
         for entry in feed!.entry {
             
             let currentCategory = (entry as! Entry).category
-            let categoryName = currentCategory.label
+            let categoryName = currentCategory.attributes.label
             
             // add this category name to categories list.
             
