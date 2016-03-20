@@ -56,6 +56,9 @@
 		844A6B8C1C9DE0F1007B4DAF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B8B1C9DE0F1007B4DAF /* BaseViewController.swift */; };
 		844A6B8F1C9DE16C007B4DAF /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B8E1C9DE16C007B4DAF /* SharedData.swift */; };
 		844A6B931C9DF0C7007B4DAF /* Link.m in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B921C9DF0C7007B4DAF /* Link.m */; };
+		84991C131C9F284A00C232DD /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84991C121C9F284A00C232DD /* CategoriesView.swift */; };
+		84991C161C9F38B400C232DD /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84991C151C9F38B400C232DD /* CategoryCell.swift */; };
+		84991C181C9F40F800C232DD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84991C171C9F40F800C232DD /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +170,9 @@
 		844A6B8E1C9DE16C007B4DAF /* SharedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		844A6B911C9DF0C7007B4DAF /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
 		844A6B921C9DF0C7007B4DAF /* Link.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Link.m; sourceTree = "<group>"; };
+		84991C121C9F284A00C232DD /* CategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		84991C151C9F38B400C232DD /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		84991C171C9F40F800C232DD /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +312,7 @@
 		844A6B031C9D7D3B007B4DAF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84991C111C9F255900C232DD /* CategoriesView */,
 				844A6B8A1C9DE0C9007B4DAF /* BaseViewController */,
 				844A6B041C9D7D56007B4DAF /* SplashView */,
 			);
@@ -464,6 +471,7 @@
 		844A6B701C9D9EFD007B4DAF /* HelperFiles */ = {
 			isa = PBXGroup;
 			children = (
+				84991C171C9F40F800C232DD /* Utils.swift */,
 				844A6B721C9D9F64007B4DAF /* AppConstants.swift */,
 				844A6B711C9D9F3B007B4DAF /* Grability-Bridging-Header.h */,
 			);
@@ -529,6 +537,23 @@
 				844A6B921C9DF0C7007B4DAF /* Link.m */,
 			);
 			path = Link;
+			sourceTree = "<group>";
+		};
+		84991C111C9F255900C232DD /* CategoriesView */ = {
+			isa = PBXGroup;
+			children = (
+				84991C141C9F389B00C232DD /* CategoryCell */,
+				84991C121C9F284A00C232DD /* CategoriesView.swift */,
+			);
+			path = CategoriesView;
+			sourceTree = "<group>";
+		};
+		84991C141C9F389B00C232DD /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				84991C151C9F38B400C232DD /* CategoryCell.swift */,
+			);
+			path = CategoryCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -674,6 +699,7 @@
 				844A6B641C9D7E11007B4DAF /* UIImage+WebP.m in Sources */,
 				844A6B771C9DA1FB007B4DAF /* BaseModel.m in Sources */,
 				844A6B4D1C9D7E11007B4DAF /* JSONModelClassProperty.m in Sources */,
+				84991C131C9F284A00C232DD /* CategoriesView.swift in Sources */,
 				844A6B611C9D7E11007B4DAF /* UIButton+WebCache.m in Sources */,
 				844A6B5E1C9D7E11007B4DAF /* SDWebImageDownloaderOperation.m in Sources */,
 				8432FBDC1C9E54D0005E2231 /* RequestConnection.m in Sources */,
@@ -685,6 +711,7 @@
 				844A6B871C9DAF60007B4DAF /* Entry.m in Sources */,
 				844A6B931C9DF0C7007B4DAF /* Link.m in Sources */,
 				844A6B731C9D9F64007B4DAF /* AppConstants.swift in Sources */,
+				84991C161C9F38B400C232DD /* CategoryCell.swift in Sources */,
 				844A6B531C9D7E11007B4DAF /* JSONKeyMapper.m in Sources */,
 				844A6B5C1C9D7E11007B4DAF /* SDWebImageDecoder.m in Sources */,
 				844A6B8F1C9DE16C007B4DAF /* SharedData.swift in Sources */,
@@ -695,6 +722,7 @@
 				844A6B5D1C9D7E11007B4DAF /* SDWebImageDownloader.m in Sources */,
 				844A6B5B1C9D7E11007B4DAF /* SDWebImageCompat.m in Sources */,
 				844A6B6B1C9D7F42007B4DAF /* SplashView.swift in Sources */,
+				84991C181C9F40F800C232DD /* Utils.swift in Sources */,
 				844A6B541C9D7E11007B4DAF /* JSONValueTransformer.m in Sources */,
 				844A6B621C9D7E11007B4DAF /* UIImage+GIF.m in Sources */,
 				844A6B631C9D7E11007B4DAF /* UIImage+MultiFormat.m in Sources */,

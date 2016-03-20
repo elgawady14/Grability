@@ -36,7 +36,10 @@
             
             NSLog(@"Json: %@",json);
 
+//            id repairedJson = [RequestConnection repairReturnedResponse:json];
+//            data = [[responseClass alloc] initWithDictionary:repairedJson error:nil];
             data = [[responseClass alloc] initWithDictionary:json error:nil];
+
         } else {
             if(true)
                 NSLog(@"Error: %@",err);
@@ -47,7 +50,38 @@
     }];
 }
 
++ (id) repairReturnedResponse: (id) response {
+    
+    // convert to mutable string
+    
+    NSString *jsonString = [NSString stringWithFormat:@"%@", response];
+    
+    // replace un wanted key
+    
+    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"im:id" withString:@"imid"];
+    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"im:bundleId" withString:@"imbundleId"];
+    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"im:name" withString:@"imname"];
+    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"im:image" withString:@"imimage"];
+    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"im:price" withString:@"imprice"];
+    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"im:contentType" withString:@"imcontentType"];
+    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"im:artist" withString:@"imartist"];
+    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"im:releaseDate" withString:@"imreleaseDate"];
 
+    // convert nsstring back to nsdictionary.
+    
+    NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    id repairedJson = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    
+    NSError* error;
+    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
+                                                         options:kNilOptions
+                                                           error:&error];
+    
+    
+ 
+    
+    return repairedJson;
+}
 
 
 

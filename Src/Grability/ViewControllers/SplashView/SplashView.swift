@@ -14,7 +14,7 @@ class SplashView: BaseViewController {
         super.viewDidLoad()
 
         // start animating the indicator, then make connection to get recent released books
-        server!.requestTopFreeApplications(onDelegate: self)
+        //server!.requestTopFreeApplications(onDelegate: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,7 +22,7 @@ class SplashView: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK:- Get Books By categoryId api CONNECTIONS
+    //MARK:- TopFreeApplications Api handler methods.
     
     func successResponeTopFreeAppsApi(withFeed feed: Feed?) {
         
@@ -36,13 +36,16 @@ class SplashView: BaseViewController {
         // hide indicator.
         //nactivityIndCategoriesBooks.stopAnimating()
         
+        SharedData.sharedObj.returnedFeed = feed
+
+        
         
     }
     
     func failResponseTopFreeAppsApi(withMessage message: String?) {
         
         //notify user
-        //Utils.showAlertDialogInView(self, withTilte: "Info", andMessage: message, andButtonTitle: "OK")
+        Utils.showAlertDialogInView(self, withTilte: "Info", andMessage: message, andButtonTitle: "OK")
         
         // hide indicator
         //activityIndCategoriesBooks.stopAnimating()

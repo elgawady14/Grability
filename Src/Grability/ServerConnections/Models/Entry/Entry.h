@@ -68,6 +68,7 @@
 @property NSString <Optional> *term;
 @property NSString <Optional> *scheme;
 
+
 @end
 
 @protocol Categoryy @end
@@ -95,3 +96,18 @@
 @property Categoryy <Optional> *category;
 @property ImReleaseDate <Optional> *imreleaseDate; //$ im:releaseDate
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
