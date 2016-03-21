@@ -36,7 +36,6 @@ class SplashView: BaseViewController {
         // hide indicator.
         //nactivityIndCategoriesBooks.stopAnimating()
         
-        SharedData.sharedObj.returnedFeed = feed
 
         
         

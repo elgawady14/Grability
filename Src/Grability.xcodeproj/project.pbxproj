@@ -59,6 +59,10 @@
 		84991C131C9F284A00C232DD /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84991C121C9F284A00C232DD /* CategoriesView.swift */; };
 		84991C161C9F38B400C232DD /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84991C151C9F38B400C232DD /* CategoryCell.swift */; };
 		84991C181C9F40F800C232DD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84991C171C9F40F800C232DD /* Utils.swift */; };
+		84BD2E691CA0881500A27771 /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD2E681CA0881500A27771 /* AppCell.swift */; };
+		84BD2E6B1CA08A4000A27771 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BD2E6A1CA08A4000A27771 /* placeholder.png */; };
+		84BF6A7C1CA0755600ED67AE /* AppsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF6A7B1CA0755600ED67AE /* AppsListView.swift */; };
+		84BF6A801CA0790800ED67AE /* BookDetailBg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BF6A7F1CA0790800ED67AE /* BookDetailBg2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +177,10 @@
 		84991C121C9F284A00C232DD /* CategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		84991C151C9F38B400C232DD /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		84991C171C9F40F800C232DD /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		84BD2E681CA0881500A27771 /* AppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
+		84BD2E6A1CA08A4000A27771 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		84BF6A7B1CA0755600ED67AE /* AppsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsListView.swift; sourceTree = "<group>"; };
+		84BF6A7F1CA0790800ED67AE /* BookDetailBg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BookDetailBg2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +358,8 @@
 		844A6B071C9D7D9B007B4DAF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				84BD2E6A1CA08A4000A27771 /* placeholder.png */,
+				84BF6A7F1CA0790800ED67AE /* BookDetailBg2.png */,
 				844A6B6C1C9D8021007B4DAF /* logo.jpg */,
 			);
 			path = Images;
@@ -560,8 +570,18 @@
 		84BF6A7A1CA0751200ED67AE /* AppsListView */ = {
 			isa = PBXGroup;
 			children = (
+				84BF6A811CA0869500ED67AE /* AppCell */,
+				84BF6A7B1CA0755600ED67AE /* AppsListView.swift */,
 			);
 			path = AppsListView;
+			sourceTree = "<group>";
+		};
+		84BF6A811CA0869500ED67AE /* AppCell */ = {
+			isa = PBXGroup;
+			children = (
+				84BD2E681CA0881500A27771 /* AppCell.swift */,
+			);
+			path = AppCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -675,7 +695,9 @@
 				844A6ADA1C9D7369007B4DAF /* LaunchScreen.storyboard in Resources */,
 				844A6AD71C9D7369007B4DAF /* Assets.xcassets in Resources */,
 				844A6B561C9D7E11007B4DAF /* LICENSE.txt in Resources */,
+				84BD2E6B1CA08A4000A27771 /* placeholder.png in Resources */,
 				844A6B6D1C9D8021007B4DAF /* logo.jpg in Resources */,
+				84BF6A801CA0790800ED67AE /* BookDetailBg2.png in Resources */,
 				844A6AD51C9D7369007B4DAF /* Main.storyboard in Resources */,
 				844A6B681C9D7E11007B4DAF /* UIActivityIndicator-for-SDWebImage.podspec in Resources */,
 			);
@@ -717,6 +739,7 @@
 				844A6B591C9D7E11007B4DAF /* NSData+ImageContentType.m in Sources */,
 				844A6B8C1C9DE0F1007B4DAF /* BaseViewController.swift in Sources */,
 				844A6B871C9DAF60007B4DAF /* Entry.m in Sources */,
+				84BD2E691CA0881500A27771 /* AppCell.swift in Sources */,
 				844A6B931C9DF0C7007B4DAF /* Link.m in Sources */,
 				844A6B731C9D9F64007B4DAF /* AppConstants.swift in Sources */,
 				84991C161C9F38B400C232DD /* CategoryCell.swift in Sources */,
@@ -738,6 +761,7 @@
 				844A6B601C9D7E11007B4DAF /* SDWebImagePrefetcher.m in Sources */,
 				844A6B4E1C9D7E11007B4DAF /* JSONModelError.m in Sources */,
 				844A6B581C9D7E11007B4DAF /* MKAnnotationView+WebCache.m in Sources */,
+				84BF6A7C1CA0755600ED67AE /* AppsListView.swift in Sources */,
 				844A6B661C9D7E11007B4DAF /* UIImageView+WebCache.m in Sources */,
 				844A6B831C9DAD01007B4DAF /* Feed.m in Sources */,
 				844A6B671C9D7E11007B4DAF /* UIView+WebCacheOperation.m in Sources */,

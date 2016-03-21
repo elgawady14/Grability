@@ -25,6 +25,10 @@ class CategoriesView: BaseViewController {
     
     var categoriesList = [String]()
     
+    // keep user category selection
+    
+    var selectedCategoryIndex: Int?
+    
     
     //MARK:- VIEW ACTIONS
     
@@ -74,9 +78,12 @@ class CategoriesView: BaseViewController {
     
     //MARK:- collection view delegate
     
+    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-
+        selectedCategoryIndex = indexPath.item
+        
+        self.performSegueWithIdentifier("goToAppsList", sender: nil)
     }
 
     //MARK:- TopFreeApplications Api handler methods.
@@ -102,6 +109,11 @@ class CategoriesView: BaseViewController {
         // hide indicator.
         
         activityIndCategories.stopAnimating()
+        
+        // store the returned response in the singleton obj.
+        
+        SharedData.sharedObj.returnedFeed = feed
+
     }
     
     func failResponseTopFreeAppsApi(withMessage message: String?) {
@@ -111,6 +123,19 @@ class CategoriesView: BaseViewController {
         
         // hide indicator
         activityIndCategories.stopAnimating()
+    }
+    
+    //MAEK:- SEGUE
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "goToAppsList" {
+            
+            if let destinationVC = segue.destinationViewController as? AppsListView {
+                
+                destinationVC.passedCategoryName = categoriesList[selectedCategoryIndex!]
+            }
+        }
     }
     
 }
