@@ -312,6 +312,7 @@
 		844A6B031C9D7D3B007B4DAF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84BF6A7A1CA0751200ED67AE /* AppsListView */,
 				84991C111C9F255900C232DD /* CategoriesView */,
 				844A6B8A1C9DE0C9007B4DAF /* BaseViewController */,
 				844A6B041C9D7D56007B4DAF /* SplashView */,
@@ -554,6 +555,13 @@
 				84991C151C9F38B400C232DD /* CategoryCell.swift */,
 			);
 			path = CategoryCell;
+			sourceTree = "<group>";
+		};
+		84BF6A7A1CA0751200ED67AE /* AppsListView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppsListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
