@@ -67,7 +67,7 @@ class CategoriesView: BaseViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.darkGrayColor()
     }
     
-    // used in get array unique values.
+    // used to get the unique values from an array.
     
     func uniq<S: SequenceType, E: Hashable where E==S.Generator.Element>(source: S) -> [E] {
         var seen: [E:Bool] = [:]
