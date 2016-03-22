@@ -23,6 +23,9 @@ class AppsListView: BaseViewController {
     
     var passedCategoryName: String?
     
+    // keep user app selection
+    
+    var selectedAppIndex: Int?
     
     //MARK:- VIEW ACTIONS
     
@@ -93,8 +96,8 @@ class AppsListView: BaseViewController {
         
         // fetch App image sized 75 * 75
         
-//        let imageAppStr = currentEntry.imimage[2] as! ImImage
-//        let imageURL = NSURL(string: imageAppStr.label)
+//        let imageApp = currentEntry.imimage[1] as! ImImage
+//        let imageURL = NSURL(string: imageApp.label)
 //        
 //        // set app image.
 //        
@@ -116,7 +119,22 @@ class AppsListView: BaseViewController {
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
+        selectedAppIndex = indexPath.item
         
+        self.performSegueWithIdentifier("goToAppSummary", sender: nil)
+    }
+    
+    //MAEK:- SEGUE
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "goToAppSummary" {
+            
+            if let destinationVC = segue.destinationViewController as? AppSummary {
+                
+                destinationVC.selectedAppIndex = selectedAppIndex
+            }
+        }
     }
     
 }
