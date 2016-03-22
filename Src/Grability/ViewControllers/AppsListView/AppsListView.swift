@@ -57,10 +57,11 @@ class AppsListView: BaseViewController {
             NSFontAttributeName: UIFont.systemFontOfSize(15, weight: 1)
         ]
         self.navigationController?.navigationBar.titleTextAttributes = attributes
-        
+        self.navigationController?.navigationBar.tintColor = UIColor.darkGrayColor()
+
         // set nav bar title.
         
-        self.navigationController?.navigationItem.title = passedCategoryName
+        self.title = passedCategoryName
         
     }
         
@@ -80,10 +81,10 @@ class AppsListView: BaseViewController {
         
         // make each app image bounded and rounded by a border.
         
-        cell.imageViewAppImg.layer.cornerRadius = 5.0
-        cell.labelCategoryName.layer.masksToBounds = true
-        cell.labelCategoryName.layer.borderWidth = 0.1
-        cell.labelCategoryName.layer.borderColor = UIColor.lightGrayColor().CGColor
+        cell.imageViewAppImg.layer.cornerRadius = 20.0
+        cell.imageViewAppImg.layer.masksToBounds = true
+        cell.imageViewAppImg.layer.borderWidth = 0.1
+        cell.imageViewAppImg.layer.borderColor = UIColor.lightGrayColor().CGColor
         
         // set app image, fetch app image url.
         // fetch the  current Entry object.

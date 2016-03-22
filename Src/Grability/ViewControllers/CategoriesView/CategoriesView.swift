@@ -42,13 +42,37 @@ class CategoriesView: BaseViewController {
     
     func preSettings() {
         
-        // start animating the indicator, then make connection to get all categories
+        // because the categories list collection view hide it.
         
+        self.view.bringSubviewToFront(activityIndCategories)
+        
+        // start animating the indicator, then make connection to get all categories
+
         activityIndCategories.startAnimating()
         
         server!.requestTopFreeApplications(onDelegate: self)
+        
+        setupNavigationBar()
     }
     
+    func setupNavigationBar() {
+        
+        // set up nav bar.
+        
+        let attributes = [
+            NSForegroundColorAttributeName: UIColor.darkGrayColor(),
+            NSFontAttributeName: UIFont.systemFontOfSize(15, weight: 1)
+        ]
+        self.navigationController?.navigationBar.titleTextAttributes = attributes
+        self.navigationController?.navigationBar.tintColor = UIColor.darkGrayColor()
+    }
+    
+    // used in get array unique values.
+    
+    func uniq<S: SequenceType, E: Hashable where E==S.Generator.Element>(source: S) -> [E] {
+        var seen: [E:Bool] = [:]
+        return source.filter { seen.updateValue(true, forKey: $0) == nil }
+    }
 
     //MARK:- collection view data source
     
@@ -101,6 +125,10 @@ class CategoriesView: BaseViewController {
             
             categoriesList.append(categoryName)
         }
+        
+        // get unique values
+
+        categoriesList = uniq(categoriesList)
         
         // update categories collection view with the returned categories data.
         
