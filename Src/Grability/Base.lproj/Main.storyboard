@@ -136,8 +136,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppsListBGImg.png" translatesAutoresizingMaskIntoConstraints="NO" id="bcL-oS-pVi">
                                 <rect key="frame" x="0.0" y="83" width="600" height="509"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t8Z-Ok-MEQ">
-                                <rect key="frame" x="20" y="96" width="560" height="481"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t8Z-Ok-MEQ">
+                                <rect key="frame" x="20" y="97" width="560" height="481"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="6" id="D6u-e8-qF3">
                                     <size key="itemSize" width="85" height="148"/>
@@ -216,8 +216,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Tdc-pl-HX5" firstAttribute="top" secondItem="t8Z-Ok-MEQ" secondAttribute="bottom" constant="23" id="2L7-1e-gf5"/>
-                            <constraint firstItem="t8Z-Ok-MEQ" firstAttribute="top" secondItem="2PO-Ru-V86" secondAttribute="bottom" constant="32" id="9co-nx-1pT"/>
+                            <constraint firstItem="Tdc-pl-HX5" firstAttribute="top" secondItem="t8Z-Ok-MEQ" secondAttribute="bottom" constant="22" id="2L7-1e-gf5"/>
+                            <constraint firstItem="t8Z-Ok-MEQ" firstAttribute="top" secondItem="2PO-Ru-V86" secondAttribute="bottom" constant="33" id="9co-nx-1pT"/>
                             <constraint firstItem="up8-l1-jNq" firstAttribute="centerY" secondItem="juY-oS-Zre" secondAttribute="centerY" id="CGx-Yd-pTR"/>
                             <constraint firstAttribute="trailing" secondItem="bcL-oS-pVi" secondAttribute="trailing" id="Ilj-Nf-vCm"/>
                             <constraint firstItem="t8Z-Ok-MEQ" firstAttribute="top" secondItem="bcL-oS-pVi" secondAttribute="bottom" constant="-484" id="QTP-gT-tD2"/>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8422C79E1CA1B67E007542F4 /* AppsListBGImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8422C79D1CA1B67E007542F4 /* AppsListBGImg.png */; };
+		8422C7A01CA1CAE2007542F4 /* AppsListBGImgTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 8422C79F1CA1CAE2007542F4 /* AppsListBGImgTransparent.png */; };
 		8432FBDC1C9E54D0005E2231 /* RequestConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432FBDB1C9E54D0005E2231 /* RequestConnection.m */; };
 		844A6AD01C9D7369007B4DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A6ACF1C9D7369007B4DAF /* AppDelegate.swift */; };
 		844A6AD51C9D7369007B4DAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844A6AD31C9D7369007B4DAF /* Main.storyboard */; };
@@ -63,7 +64,6 @@
 		84BD2E691CA0881500A27771 /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD2E681CA0881500A27771 /* AppCell.swift */; };
 		84BD2E6B1CA08A4000A27771 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BD2E6A1CA08A4000A27771 /* placeholder.png */; };
 		84BF6A7C1CA0755600ED67AE /* AppsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF6A7B1CA0755600ED67AE /* AppsListView.swift */; };
-		84BF6A801CA0790800ED67AE /* BookDetailBg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BF6A7F1CA0790800ED67AE /* BookDetailBg2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +85,7 @@
 
 /* Begin PBXFileReference section */
 		8422C79D1CA1B67E007542F4 /* AppsListBGImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppsListBGImg.png; sourceTree = "<group>"; };
+		8422C79F1CA1CAE2007542F4 /* AppsListBGImgTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppsListBGImgTransparent.png; sourceTree = "<group>"; };
 		8432FBDA1C9E54D0005E2231 /* RequestConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestConnection.h; sourceTree = "<group>"; };
 		8432FBDB1C9E54D0005E2231 /* RequestConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestConnection.m; sourceTree = "<group>"; };
 		844A6ACC1C9D7369007B4DAF /* Grability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grability.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,7 +183,6 @@
 		84BD2E681CA0881500A27771 /* AppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
 		84BD2E6A1CA08A4000A27771 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		84BF6A7B1CA0755600ED67AE /* AppsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsListView.swift; sourceTree = "<group>"; };
-		84BF6A7F1CA0790800ED67AE /* BookDetailBg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BookDetailBg2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,9 +360,9 @@
 		844A6B071C9D7D9B007B4DAF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8422C79F1CA1CAE2007542F4 /* AppsListBGImgTransparent.png */,
 				8422C79D1CA1B67E007542F4 /* AppsListBGImg.png */,
 				84BD2E6A1CA08A4000A27771 /* placeholder.png */,
-				84BF6A7F1CA0790800ED67AE /* BookDetailBg2.png */,
 				844A6B6C1C9D8021007B4DAF /* logo.jpg */,
 			);
 			path = Images;
@@ -699,9 +699,9 @@
 				844A6ADA1C9D7369007B4DAF /* LaunchScreen.storyboard in Resources */,
 				844A6AD71C9D7369007B4DAF /* Assets.xcassets in Resources */,
 				844A6B561C9D7E11007B4DAF /* LICENSE.txt in Resources */,
+				8422C7A01CA1CAE2007542F4 /* AppsListBGImgTransparent.png in Resources */,
 				84BD2E6B1CA08A4000A27771 /* placeholder.png in Resources */,
 				844A6B6D1C9D8021007B4DAF /* logo.jpg in Resources */,
-				84BF6A801CA0790800ED67AE /* BookDetailBg2.png in Resources */,
 				844A6AD51C9D7369007B4DAF /* Main.storyboard in Resources */,
 				844A6B681C9D7E11007B4DAF /* UIActivityIndicator-for-SDWebImage.podspec in Resources */,
 			);
