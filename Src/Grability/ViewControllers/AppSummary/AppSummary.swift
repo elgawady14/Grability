@@ -77,22 +77,22 @@ class AppSummary: BaseViewController {
         
         labelAppName.text = currentAppEntry?.title.label
         
-//        labelArtist.text = currentAppEntry?.imartist.label
+        labelArtist.text = currentAppEntry?.imartist.label
         
-        // fetch App image sized 100 * 100
+         //fetch App image sized 100 * 100
         
-//        let imageApp = currentAppEntry!.imimage[2] as? ImImage
-//        let imageURL = NSURL(string: imageApp!.label)
-//
-//        // set app image.
-//        imageViewAppImg.setImageWithURL(imageURL, placeholderImage: UIImage(named: "placeholder"), usingActivityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+        let imageApp = currentAppEntry!.imimage[2] as? ImImage
+        let imageURL = NSURL(string: imageApp!.label)
+
+        // set app image.
+        imageViewAppImg.setImageWithURL(imageURL, placeholderImage: UIImage(named: "placeholder"), usingActivityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
         
-//        let price: String = currentAppEntry?.imprice.attributes.amount
-//        
-//        let currency: String = currentAppEntry?.imprice.attributes.currency
+        //let price: String = currentAppEntry?.imprice.attributes.amount
+        
+        //let currency: String = currentAppEntry?.imprice.attributes.currency
         
         
-//        buttonPrice.setTitle(currency + " " + price, forState: .Normal)
+        //buttonPrice.setTitle(currency + " " + price, forState: .Normal)
         
         labelAppDescription.text = currentAppEntry?.summary.label
         
