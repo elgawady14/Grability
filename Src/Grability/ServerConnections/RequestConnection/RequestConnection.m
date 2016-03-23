@@ -38,6 +38,7 @@
 
 //            id repairedJson = [RequestConnection repairReturnedResponse:json];
 //            data = [[responseClass alloc] initWithDictionary:repairedJson error:nil];
+            
             data = [[responseClass alloc] initWithDictionary:json error:nil];
 
         } else {

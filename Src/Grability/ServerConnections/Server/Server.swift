@@ -55,7 +55,7 @@ class Server: NSObject {
                     
                     // check if cached data not founded, save new one.
                     
-                    self.checkCachedData((response as? NSDictionary)!)
+                    self.checkCachedData(response.toDictionary())
                     
                     let jsonResponse = response as! TopFreeAppsResponse
                     

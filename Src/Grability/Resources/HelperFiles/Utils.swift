@@ -47,11 +47,10 @@ class Utils: NSObject {
     
     class func checkCachedDataExist() -> Bool {
         
-        let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-        let url = NSURL(fileURLWithPath: path)
-        let filePath = url.URLByAppendingPathComponent("cachedResponseTopAppsApi.plist").absoluteString
+        let readFilePath = getCachedFilePath()
+        
         let fileManager = NSFileManager.defaultManager()
-        if fileManager.fileExistsAtPath(filePath) {
+        if fileManager.fileExistsAtPath(readFilePath as String) {
             print("cachedResponseTopAppsApi.plist FILE AVAILABLE")
             return true
         } else {
@@ -60,13 +59,31 @@ class Utils: NSObject {
         }
     }
     
+    class func getCachedFilePath() -> String {
+        
+        let dirPath: NSString = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first!
+        let filePath = dirPath.stringByAppendingPathComponent("cachedResponseTopAppsApi.plist")
+        
+        return filePath
+    }
+    
     class func writeToFileThisDictionary(dictioanry: NSDictionary) {
         
-        let documents = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] 
-        let writePath = documents.stringByAppendingString("cachedResponseTopAppsApi.plist")
-        
-        dictioanry.writeToFile(writePath, atomically: true)
+        if let writefilePath: String = getCachedFilePath() {
+            
+            dictioanry.writeToFile(writefilePath, atomically: false)
+            
+            print("cachedResponseTopAppsApi.plist FILE SAVED.")
+
+        } else {
+            
+            Utils.showAlertDialogInView(withTilte: "Error", andMessage: "Some error occured during storing the cached data.", andButtonTitle: "OK")
+
+        }
+    
     }
+    
+
     
 
 
