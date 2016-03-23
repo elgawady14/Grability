@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9uB-gE-rfX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -17,22 +17,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="splash screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45B-qE-P0K">
-                                <rect key="frame" x="227" y="287" width="146" height="26"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="FEv-5N-Gt5">
+                                <rect key="frame" x="265" y="441" width="71" height="37"/>
+                                <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="pageIndicatorTintColor" red="0.0" green="0.41179237367315441" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gO8-aM-hug">
+                                <rect key="frame" x="266" y="509" width="69" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionContinue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vss-zN-tGW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grability" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfZ-dR-Zg7">
+                                <rect key="frame" x="255" y="287" width="90" height="26"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.17254901959999999" green="0.52941176469999995" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vqn-GR-Ois">
+                                <rect key="frame" x="258" y="195" width="84" height="72"/>
+                                <color key="backgroundColor" red="0.16862745100000001" green="0.53725490200000003" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="A3O-eU-4r9"/>
+                                    <constraint firstAttribute="height" constant="72" id="UsQ-6m-uiE"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="45B-qE-P0K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SoG-S6-Q0O"/>
-                            <constraint firstItem="45B-qE-P0K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gVr-J0-MaE"/>
+                            <constraint firstItem="gO8-aM-hug" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="12H-jR-1Wj"/>
+                            <constraint firstItem="WfZ-dR-Zg7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8gs-FY-Z7c"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gO8-aM-hug" secondAttribute="bottom" constant="61" id="A1A-lZ-78b"/>
+                            <constraint firstItem="vqn-GR-Ois" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cte-Z9-5dg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FEv-5N-Gt5" secondAttribute="bottom" constant="122" id="KSV-vE-TxM"/>
+                            <constraint firstItem="FEv-5N-Gt5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ohy-7W-znQ"/>
+                            <constraint firstItem="WfZ-dR-Zg7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="p5m-VT-bBx"/>
+                            <constraint firstItem="WfZ-dR-Zg7" firstAttribute="top" secondItem="vqn-GR-Ois" secondAttribute="bottom" constant="20" id="pxF-pi-XDZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonContinue" destination="gO8-aM-hug" id="a2t-F2-Gau"/>
+                        <outlet property="pageControl" destination="FEv-5N-Gt5" id="n1S-ao-ODZ"/>
+                        <segue destination="9uB-gE-rfX" kind="show" identifier="goToCategoriesView" id="chE-KP-YcZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="452" y="147"/>
         </scene>
         <!--     All Categories-->
         <scene sceneID="INc-UO-wPl">
@@ -469,6 +505,7 @@
     </scenes>
     <resources>
         <image name="AppsListBGImg.png" width="564" height="603"/>
+        <image name="logo.jpg" width="160" height="160"/>
         <image name="placeholder.png" width="186" height="149"/>
     </resources>
 </document>

@@ -11,9 +11,12 @@ import Foundation
 
 class SharedData {
     
-    // this'll be the app sinleton object
     var returnedFeed: Feed?
     
+    var connectionState: String?
+
+    // this'll be the app sinleton object.
+
     static let sharedObj = SharedData()
     
 }

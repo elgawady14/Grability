@@ -46,11 +46,24 @@ class CategoriesView: BaseViewController {
         
         self.view.bringSubviewToFront(activityIndCategories)
         
-        // start animating the indicator, then make connection to get all categories
-
-        activityIndCategories.startAnimating()
+        if SharedData.sharedObj.connectionState == "OnLine" {
+            
+            // start animating the indicator, then make connection to get all categories
+            
+            activityIndCategories.startAnimating()
+            
+            server!.requestTopFreeApplications(onDelegate: self)
+        }
+        else if SharedData.sharedObj.connectionState == "OffLineCached" {
+            
+            
+        }
         
-        server!.requestTopFreeApplications(onDelegate: self)
+        else if SharedData.sharedObj.connectionState == "OffLineNotCached" {
+            
+            
+        }
+
         
         setupNavigationBar()
     }
@@ -147,7 +160,7 @@ class CategoriesView: BaseViewController {
     func failResponseTopFreeAppsApi(withMessage message: String?) {
         
         //notify user
-        Utils.showAlertDialogInView(self, withTilte: "Info", andMessage: message, andButtonTitle: "OK")
+        Utils.showAlertDialogInView(withTilte: "Info", andMessage: message, andButtonTitle: "OK")
         
         // hide indicator
         activityIndCategories.stopAnimating()

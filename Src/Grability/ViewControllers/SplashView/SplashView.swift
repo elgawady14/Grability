@@ -9,45 +9,103 @@
 import UIKit
 
 class SplashView: BaseViewController {
-
+    
+    // UI controls
+    
+    @IBOutlet var pageControl: UIPageControl!
+    @IBOutlet var buttonContinue: UIButton!
+    
+    // would been used in show/hide according to user status.
+    
+//    @IBOutlet var buttonRegister: UIButton!
+//    @IBOutlet var buttonLogin: UIButton!
+//    @IBOutlet var buttonSkip: UIButton!
+//    @IBOutlet var viewGray: UIImageView!
+    
+    // refer to page control index
+    
+    var currentPage = 0
+    
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
-        // start animating the indicator, then make connection to get recent released books
-        //server!.requestTopFreeApplications(onDelegate: self)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        // initilization method
+        
+        preSettings()
     }
     
-    //MARK:- TopFreeApplications Api handler methods.
+    func preSettings () {
+        
+        // hide this control temporarily
+        
+        self.buttonContinue.hidden = true
+       
+        // set timer to animate page control
+        
+        NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("UpdateLoading"), userInfo: nil, repeats: true)
+    }
     
-    func successResponeTopFreeAppsApi(withFeed feed: Feed?) {
+    func UpdateLoading () {
         
-        // add the new returned category books to categoryBooksList array,
-        // arrayCategoriesBooks = categoryBooksList!
+        // make animation when update page control index
         
-        
-        // update UI
-        //collectionViewCategoriesBooks.reloadData()
-        
-        // hide indicator.
-        //nactivityIndCategoriesBooks.stopAnimating()
-        
+        UIView.animateWithDuration(0.3, animations: {
+            
+            self.pageControl.currentPage = self.currentPage
+            self.currentPage++
+            
+            }, completion: {
+                (finished: Bool) in
+                
+                if self.currentPage == 5 {
+                            
+                    if !Utils.isConnectedToNetwork() {
+                        
+                        if !Utils.checkCachedDataExist() {
 
+                            Utils.showAlertDialogInView(withTilte: "Warning ⚠️", andMessage: "You're not connected to internet. No cached data founded so you should check your internet connection!", andButtonTitle: "OK ☑️")
+                            SharedData.sharedObj.connectionState = "OffLineNotCached"
+
+                        } else {
+                            
+                            Utils.showAlertDialogInView(withTilte: "Info ⚠️", andMessage: "You're not connected to internet but the app will use the cached data. ", andButtonTitle: "OK ☑️")
+                            SharedData.sharedObj.connectionState = "OffLineCached"
+                        }
+                        
+                    } else {
+                        
+                        SharedData.sharedObj.connectionState = "OnLine"
+                    }
+                    
+                    self.buttonContinue.hidden = false
+                    
+                }
+        })
         
         
     }
     
-    func failResponseTopFreeAppsApi(withMessage message: String?) {
+    @IBAction func actionContinue (sender: UIButton) {
         
-        //notify user
-        Utils.showAlertDialogInView(self, withTilte: "Info", andMessage: message, andButtonTitle: "OK")
+        // navigate to register page
         
-        // hide indicator
-        //activityIndCategoriesBooks.stopAnimating()
+        self.performSegueWithIdentifier("goToCategoriesView", sender: self)
     }
+    
 
+    //MAEK:- SEGUE
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "goToCategoriesView" {
+            
+            if let _ = segue.destinationViewController as? CategoriesView {
+                
+            }
+        }
+    }
+    
+    
 }

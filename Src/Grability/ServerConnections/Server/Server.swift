@@ -53,6 +53,10 @@ class Server: NSObject {
                 
                 if response != nil {
                     
+                    // check if cached data not founded, save new one.
+                    
+                    self.checkCachedData((response as? NSDictionary)!)
+                    
                     let jsonResponse = response as! TopFreeAppsResponse
                     
                     if ((error ) == nil) {
@@ -70,6 +74,19 @@ class Server: NSObject {
         })
     }
     
+    func checkCachedData(returnedResponse: NSDictionary) {
+        
+        // check if cachedResponseTopAppsApi.plist found.
+        
+        if !Utils.checkCachedDataExist() {
+            
+            // so write the returned response to cachedResponseTopAppsApi.plist file
+            
+            Utils.writeToFileThisDictionary(returnedResponse)
+            
+        }
+        
+    }
     
     /*func dummyLoginRequest (loginRequest: LoginRequest?) -> (success: Bool, response: LoginResponse?, message: String?) {
         

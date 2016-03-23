@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8418BB6F1CA302DF0034C4CE /* PXAlertView+Customization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BB6A1CA302DF0034C4CE /* PXAlertView+Customization.m */; };
+		8418BB701CA302DF0034C4CE /* PXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BB6C1CA302DF0034C4CE /* PXAlertView.m */; };
+		8418BB711CA302DF0034C4CE /* UIAlertView+PXAlertViewOverride.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BB6E1CA302DF0034C4CE /* UIAlertView+PXAlertViewOverride.m */; };
 		8422C79E1CA1B67E007542F4 /* AppsListBGImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8422C79D1CA1B67E007542F4 /* AppsListBGImg.png */; };
 		8422C7A01CA1CAE2007542F4 /* AppsListBGImgTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 8422C79F1CA1CAE2007542F4 /* AppsListBGImgTransparent.png */; };
 		8422C7A31CA1D528007542F4 /* AppSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422C7A21CA1D528007542F4 /* AppSummary.swift */; };
@@ -85,6 +88,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8418BB691CA302DF0034C4CE /* PXAlertView+Customization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXAlertView+Customization.h"; sourceTree = "<group>"; };
+		8418BB6A1CA302DF0034C4CE /* PXAlertView+Customization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PXAlertView+Customization.m"; sourceTree = "<group>"; };
+		8418BB6B1CA302DF0034C4CE /* PXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXAlertView.h; sourceTree = "<group>"; };
+		8418BB6C1CA302DF0034C4CE /* PXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXAlertView.m; sourceTree = "<group>"; };
+		8418BB6D1CA302DF0034C4CE /* UIAlertView+PXAlertViewOverride.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+PXAlertViewOverride.h"; sourceTree = "<group>"; };
+		8418BB6E1CA302DF0034C4CE /* UIAlertView+PXAlertViewOverride.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+PXAlertViewOverride.m"; sourceTree = "<group>"; };
 		8422C79D1CA1B67E007542F4 /* AppsListBGImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppsListBGImg.png; sourceTree = "<group>"; };
 		8422C79F1CA1CAE2007542F4 /* AppsListBGImgTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppsListBGImgTransparent.png; sourceTree = "<group>"; };
 		8422C7A21CA1D528007542F4 /* AppSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSummary.swift; sourceTree = "<group>"; };
@@ -212,6 +221,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8418BB681CA302DF0034C4CE /* PXAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				8418BB691CA302DF0034C4CE /* PXAlertView+Customization.h */,
+				8418BB6A1CA302DF0034C4CE /* PXAlertView+Customization.m */,
+				8418BB6B1CA302DF0034C4CE /* PXAlertView.h */,
+				8418BB6C1CA302DF0034C4CE /* PXAlertView.m */,
+				8418BB6D1CA302DF0034C4CE /* UIAlertView+PXAlertViewOverride.h */,
+				8418BB6E1CA302DF0034C4CE /* UIAlertView+PXAlertViewOverride.m */,
+			);
+			path = PXAlertView;
+			sourceTree = "<group>";
+		};
 		8422C7A11CA1D50B007542F4 /* AppSummary */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,6 +384,7 @@
 		844A6B061C9D7D8F007B4DAF /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				8418BB681CA302DF0034C4CE /* PXAlertView */,
 				844A6B081C9D7E11007B4DAF /* JSONModel */,
 				844A6B221C9D7E11007B4DAF /* SDWebImageWithUIActivityIndicator */,
 			);
@@ -742,7 +765,10 @@
 				844A6B501C9D7E11007B4DAF /* JSONAPI.m in Sources */,
 				844A6B4C1C9D7E11007B4DAF /* JSONModelArray.m in Sources */,
 				844A6B641C9D7E11007B4DAF /* UIImage+WebP.m in Sources */,
+				8418BB701CA302DF0034C4CE /* PXAlertView.m in Sources */,
 				844A6B771C9DA1FB007B4DAF /* BaseModel.m in Sources */,
+				8418BB6F1CA302DF0034C4CE /* PXAlertView+Customization.m in Sources */,
+				8418BB711CA302DF0034C4CE /* UIAlertView+PXAlertViewOverride.m in Sources */,
 				844A6B4D1C9D7E11007B4DAF /* JSONModelClassProperty.m in Sources */,
 				84991C131C9F284A00C232DD /* CategoriesView.swift in Sources */,
 				844A6B611C9D7E11007B4DAF /* UIButton+WebCache.m in Sources */,
