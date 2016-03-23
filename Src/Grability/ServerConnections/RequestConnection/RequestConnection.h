@@ -14,6 +14,8 @@
 @interface RequestConnection : NSObject
 +(void) makeRequestWithApiName:(NSString *)apiName andResponseClass:(id)responseClass andParams:(BaseModel*)params withHandler:(void (^)(id, NSString*, NSString*))completionHandler;
 
++ (NSString*) repairReturnedResponse: (NSString*) response;
+
 @end
 
 

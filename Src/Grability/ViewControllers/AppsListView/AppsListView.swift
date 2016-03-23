@@ -96,12 +96,12 @@ class AppsListView: BaseViewController {
         
         // fetch App image sized 75 * 75
         
-//        let imageApp = currentEntry.imimage[1] as! ImImage
-//        let imageURL = NSURL(string: imageApp.label)
-//        
-//        // set app image.
-//        
-//        cell.imageViewAppImg.setImageWithURL(imageURL, placeholderImage: UIImage(named: "placeholder"), usingActivityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+        let imageApp = currentEntry.imimage[1] as! ImImage
+        let imageURL = NSURL(string: imageApp.label)
+        
+        // set app image.
+        
+        cell.imageViewAppImg.setImageWithURL(imageURL, placeholderImage: UIImage(named: "placeholder"), usingActivityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
         
         // set App name.
         

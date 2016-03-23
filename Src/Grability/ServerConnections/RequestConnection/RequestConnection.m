@@ -51,7 +51,7 @@
     }];
 }
 
-+ (id) repairReturnedResponse: (id) response {
++ (NSString*) repairReturnedResponse: (NSString*) response {
     
     // convert to mutable string
     
@@ -70,18 +70,18 @@
 
     // convert nsstring back to nsdictionary.
     
-    NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-    id repairedJson = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-    
-    NSError* error;
-    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
-                                                         options:kNilOptions
-                                                           error:&error];
-    
+//    NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+//    id repairedJson = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+//    
+//    NSError* error;
+//    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
+//                                                         options:kNilOptions
+//                                                           error:&error];
+//    
     
  
     
-    return repairedJson;
+    return jsonString;
 }
 
 
