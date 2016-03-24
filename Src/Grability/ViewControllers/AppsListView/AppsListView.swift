@@ -40,28 +40,33 @@ class AppsListView: BaseViewController {
     
     func preSettings() {
         
-        // get the Feed object that stored in the singleton obj.
+        // fill the entryList array with the corresponding apps
+        // for selected category.
         
-        let returnedFeed = SharedData.sharedObj.returnedFeed
-        
-        // assign the Entry list contained in the stored returnedFeed obj. to entryList array.
-        
-        entryList = returnedFeed?.entry as! [Entry]
+        getSelectedCategoryApps()
         
         setupNavigationBar()
     }
     
-    func setupNavigationBar() {
+    func getSelectedCategoryApps() {
         
-        // set up nav bar.
+        // get the Feed object that stored in the singleton obj.
         
-        let attributes = [
-            NSForegroundColorAttributeName: UIColor.darkGrayColor(),
-            NSFontAttributeName: UIFont.systemFontOfSize(15, weight: 1)
-        ]
-        self.navigationController?.navigationBar.titleTextAttributes = attributes
-        self.navigationController?.navigationBar.tintColor = UIColor.darkGrayColor()
-
+        let returnedFeed = SharedData.sharedObj.returnedFeed
+        
+        for entry in returnedFeed?.entry as! [Entry] {
+            
+            // check if category is the one which selected.
+            
+            if entry.category.attributes.label == passedCategoryName {
+                
+                entryList.append(entry)
+            }
+        }
+    }
+    
+    override func setupNavigationBar() {
+        
         // set nav bar title.
         
         self.title = passedCategoryName
@@ -132,7 +137,7 @@ class AppsListView: BaseViewController {
             
             if let destinationVC = segue.destinationViewController as? AppSummary {
                 
-                destinationVC.selectedAppIndex = selectedAppIndex
+                destinationVC.selectedApp = entryList[selectedAppIndex!]
             }
         }
     }

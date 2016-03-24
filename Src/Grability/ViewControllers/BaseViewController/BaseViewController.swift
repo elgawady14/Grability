@@ -21,5 +21,19 @@ class BaseViewController: UIViewController, RequestDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        setupNavigationBar()
+    }
+    
+    func setupNavigationBar() {
+        
+        // set up nav bar.
+        
+        let attributes = [
+            NSForegroundColorAttributeName: UIColor.darkGrayColor(),
+            NSFontAttributeName: UIFont.systemFontOfSize(15, weight: 1)
+        ]
+        self.navigationController?.navigationBar.titleTextAttributes = attributes
+        self.navigationController?.navigationBar.tintColor = UIColor.darkGrayColor()
     }
 }

@@ -10,9 +10,7 @@ import UIKit
 
 class AppSummary: BaseViewController {
 
-    var selectedAppIndex: Int!
-
-    var currentAppEntry: Entry?
+    var selectedApp: Entry?
     
     // outlets
     
@@ -36,12 +34,6 @@ class AppSummary: BaseViewController {
     
     func preSettings() {
         
-        // get the Feed object that stored in the singleton obj.
-        
-        currentAppEntry = SharedData.sharedObj.returnedFeed?.entry[selectedAppIndex] as? Entry
-        
-        // assign the Entry list contained in the stored returnedFeed obj. to entryList array.
-        
         setupNavigationBar()
         
         // fill view with data
@@ -52,22 +44,18 @@ class AppSummary: BaseViewController {
         imageViewAppImg.layer.masksToBounds = true
         imageViewAppImg.layer.borderWidth = 0.1
         imageViewAppImg.layer.borderColor = UIColor.lightGrayColor().CGColor
+        
+        buttonPrice.layer.cornerRadius = 7.0
+        buttonPrice.layer.masksToBounds = true
+        buttonPrice.layer.borderWidth = 0.3
+        buttonPrice.layer.borderColor = UIColor.grayColor().CGColor
     }
     
-    func setupNavigationBar() {
-        
-        // set up nav bar.
-        
-        let attributes = [
-            NSForegroundColorAttributeName: UIColor.darkGrayColor(),
-            NSFontAttributeName: UIFont.systemFontOfSize(15, weight: 1)
-        ]
-        self.navigationController?.navigationBar.titleTextAttributes = attributes
-        self.navigationController?.navigationBar.tintColor = UIColor.darkGrayColor()
-        
+    override func setupNavigationBar() {
+
         // set nav bar title.
         
-        self.title = currentAppEntry?.title.label
+        self.title = selectedApp?.title.label
         
     }
     
@@ -75,34 +63,34 @@ class AppSummary: BaseViewController {
         
         // app name
         
-        labelAppName.text = currentAppEntry?.title.label
+        labelAppName.text = selectedApp?.title.label
         
-        labelArtist.text = currentAppEntry?.imartist.label
+        labelArtist.text = (selectedApp?.imartist.label)! + "  >"
         
          //fetch App image sized 100 * 100
         
-        let imageApp = currentAppEntry!.imimage[2] as? ImImage
+        let imageApp = selectedApp!.imimage[2] as? ImImage
         let imageURL = NSURL(string: imageApp!.label)
 
         // set app image.
         imageViewAppImg.setImageWithURL(imageURL, placeholderImage: UIImage(named: "placeholder"), usingActivityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
         
-        //let price: String = currentAppEntry?.imprice.attributes.amount
+        //let price: String = selectedApp?.imprice.attributes.amount
         
-        //let currency: String = currentAppEntry?.imprice.attributes.currency
+        //let currency: String = selectedApp?.imprice.attributes.currency
         
         
         //buttonPrice.setTitle(currency + " " + price, forState: .Normal)
         
-        labelAppDescription.text = currentAppEntry?.summary.label
+        labelAppDescription.text = selectedApp?.summary.label
         
-//        labelSellerName.text = currentAppEntry?.imartist.label
+        labelSellerName.text = selectedApp?.imartist.label
         
-        labelCategoryName.text = currentAppEntry?.category.attributes.label
+        labelCategoryName.text = selectedApp?.category.attributes.label
         
-//        labelReleaseDate.text = currentAppEntry?.imreleaseDate.attributes.label
+        labelReleaseDate.text = selectedApp?.imreleaseDate.attributes.label
         
-        labelRights.text = currentAppEntry?.rights.label
+        labelRights.text = selectedApp?.rights.label
         
         
     }

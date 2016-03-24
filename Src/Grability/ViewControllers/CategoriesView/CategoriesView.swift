@@ -64,21 +64,8 @@ class CategoriesView: BaseViewController {
             
         }
 
-        
-        setupNavigationBar()
     }
     
-    func setupNavigationBar() {
-        
-        // set up nav bar.
-        
-        let attributes = [
-            NSForegroundColorAttributeName: UIColor.darkGrayColor(),
-            NSFontAttributeName: UIFont.systemFontOfSize(15, weight: 1)
-        ]
-        self.navigationController?.navigationBar.titleTextAttributes = attributes
-        self.navigationController?.navigationBar.tintColor = UIColor.darkGrayColor()
-    }
     
     // used to get the unique values from an array.
     
