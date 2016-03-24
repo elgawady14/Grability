@@ -39,20 +39,34 @@ class Server: NSObject {
         
         let cachedDataFilePath = Utils.getCachedFilePath()
         
-        let resultDictionary = NSMutableDictionary(contentsOfFile: cachedDataFilePath)
+        let cachedDataDictionary = NSMutableDictionary(contentsOfFile: cachedDataFilePath)
         
-        print("cachedResponseTopAppsApi.plist file loaded : \n " + (resultDictionary?.description)!)
+        print("cachedResponseTopAppsApi.plist file loaded.")
         
-        encapsulateCachedData(resultDictionary)
+        encapsulateCachedData(cachedDataDictionary, onDelegate: delegate)
     }
     
-    func encapsulateCachedData(resultDictionary: NSDictionary?) {
+    func encapsulateCachedData(cachedDataDictionary: NSDictionary?, onDelegate delegate: AnyObject?) {
         
         // parse here..
         
-        //data = [[responseClass alloc] initWithDictionary:json error:nil];
-
-        RequestConnection.dummy(resultDictionary, andResponseClass: TopFreeAppsResponse.classForCoder())
+        RequestConnection.encapsulateCachedDataWithThisResponse(cachedDataDictionary, andResponseClass: TopFreeAppsResponse.classForCoder(), withHandler: {(response: AnyObject!, error: String?) -> Void in
+            
+            if response != nil {
+                
+                let jsonResponse = response as! TopFreeAppsResponse
+                
+                if ((error ) == nil) {
+                    
+                    delegate?.successResponeTopFreeAppsApi!(withFeed: jsonResponse.feed)
+                } else {
+                    delegate?.failResponseTopFreeAppsApi!(withMessage: error!)
+                }
+                
+            } else {
+                delegate?.failResponseTopFreeAppsApi!(withMessage: error!)
+            }
+        })
     }
     
     func requestRemoteTopFreeApplications (onDelegate delegate: AnyObject?) {

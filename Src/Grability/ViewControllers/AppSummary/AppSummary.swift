@@ -75,12 +75,12 @@ class AppSummary: BaseViewController {
         // set app image.
         imageViewAppImg.setImageWithURL(imageURL, placeholderImage: UIImage(named: "placeholder"), usingActivityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
         
-        //let price: String = selectedApp?.imprice.attributes.amount
+        let price: String = (selectedApp?.imprice.attributes.amount)!
         
-        //let currency: String = selectedApp?.imprice.attributes.currency
+        let currency: String = (selectedApp?.imprice.attributes.currency)!
         
         
-        //buttonPrice.setTitle(currency + " " + price, forState: .Normal)
+        buttonPrice.setTitle(currency + " " + price, forState: .Normal)
         
         labelAppDescription.text = selectedApp?.summary.label
         

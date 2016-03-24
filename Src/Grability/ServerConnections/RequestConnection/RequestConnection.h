@@ -15,7 +15,8 @@
 +(void) makeRequestWithApiName:(NSString *)apiName andResponseClass:(id)responseClass andParams:(BaseModel*)params withHandler:(void (^)(id, NSString*, NSString*))completionHandler;
 
 + (NSString*) repairReturnedResponse: (NSString*) response;
-+(void) dummy:(id) dic andResponseClass:(id) responseClass;
++ (void) encapsulateCachedDataWithThisResponse:(id)cachedResponse andResponseClass:(id)responseClass withHandler:(void (^)(id, NSString*))completionHandler;
+
 @end
 
 

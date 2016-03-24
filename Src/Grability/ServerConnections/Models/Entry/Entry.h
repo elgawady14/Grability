@@ -28,7 +28,7 @@
 
 @protocol ImPrice @end
 @interface ImPrice : BaseModel
-@property BaseModel <Optional, PriceAttributes> *attributes;
+@property PriceAttributes <Optional> *attributes;
 @end
 
 @protocol ImContentTypeAttributes @end

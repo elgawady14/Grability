@@ -39,8 +39,8 @@
             data = [[responseClass alloc] initWithDictionary:json error:nil];
 
         } else {
-            if(true)
-                NSLog(@"Error: %@",err);
+            
+            NSLog(@"Error: %@",err);
         }
         
         completionHandler(data, apiName, [err description]);
@@ -48,13 +48,26 @@
     }];
 }
 
-+(void) dummy:(id) dic andResponseClass:(id) responseClass  {
++(void) encapsulateCachedDataWithThisResponse:(id)cachedResponse andResponseClass:(id)responseClass withHandler:(void (^)(id, NSString*))completionHandler {
     
-    id data = [[responseClass alloc] initWithDictionary:dic error:nil];
+    NSError *error;
     
-    NSLog(data);
-
+    id encapsulatedResponse;
+    
+    if (cachedResponse) {
+        
+        encapsulatedResponse = [[responseClass alloc] initWithDictionary:cachedResponse error:&error];
+        
+        NSLog(@"Json: %@", encapsulatedResponse);
+        
+    } else {
+        
+        NSLog(@"Error: %@",error);
+    }
+    
+    completionHandler(encapsulatedResponse, error.description);
 }
+
 
 
 
