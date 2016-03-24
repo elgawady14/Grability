@@ -46,7 +46,7 @@ class CategoriesView: BaseViewController {
         
         self.view.bringSubviewToFront(activityIndCategories)
         
-        if SharedData.sharedObj.connectionState == "OnLine" {
+        if SharedData.sharedObj.connectionState != "OffLineNotCached" {
             
             // start animating the indicator, then make connection to get all categories
             
@@ -54,13 +54,11 @@ class CategoriesView: BaseViewController {
             
             server!.requestTopFreeApplications(onDelegate: self)
         }
-        else if SharedData.sharedObj.connectionState == "OffLineCached" {
+        else  {
             
+            // offline and not cached.
             
-        }
-        
-        else if SharedData.sharedObj.connectionState == "OffLineNotCached" {
-            
+            Utils.showAlertDialogInView(withTilte: "Warning ⚠️", andMessage: "You're not connected to internet. No cached data founded so you should check your internet connection!", andButtonTitle: "OK ☑️")
             
         }
 

@@ -24,26 +24,36 @@ class Server: NSObject {
     
     func requestTopFreeApplications (onDelegate delegate: AnyObject?){
     
-        
-        //#if PRODUCTION
+        if SharedData.sharedObj.connectionState == "OnLine" {
             
-        requestRemoteTopFreeApplications(onDelegate: delegate!)
+            requestRemoteTopFreeApplications(onDelegate: delegate!)
             
-        //#elseif DUMMY
-        
-            /*let result: (success: Bool, response: GetRecentReleasedResponse?, message: String?)
-            result = dummyRecentReleasedRequest(recentReleasedRequest)
+        } else if SharedData.sharedObj.connectionState == "OffLineCached" {
             
-            if (result.success == true) {
-            let recentReleasedList = result.response?.books as? [Book]
-            delegate?.successResponeRecentReleasedApi!(withRecentReleasedList: recentReleasedList)
-            } else {
-            delegate?.failResponseRecentReleased!(withMessage: result.message)
-            }*/
-            
-        //#endif
+            requestCachedTopFreeApplications(onDelegate: delegate!)
+        }
+    
     }
     
+    func requestCachedTopFreeApplications(onDelegate delegate: AnyObject?) {
+        
+        let cachedDataFilePath = Utils.getCachedFilePath()
+        
+        let resultDictionary = NSMutableDictionary(contentsOfFile: cachedDataFilePath)
+        
+        print("cachedResponseTopAppsApi.plist file loaded : \n " + (resultDictionary?.description)!)
+        
+        encapsulateCachedData(resultDictionary)
+    }
+    
+    func encapsulateCachedData(resultDictionary: NSDictionary?) {
+        
+        // parse here..
+        
+        //data = [[responseClass alloc] initWithDictionary:json error:nil];
+
+        RequestConnection.dummy(resultDictionary, andResponseClass: TopFreeAppsResponse.classForCoder())
+    }
     
     func requestRemoteTopFreeApplications (onDelegate delegate: AnyObject?) {
         

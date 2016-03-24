@@ -28,16 +28,13 @@
     
 
     [JSONHTTPClient postJSONFromURLWithString:url params:nil completion:^(id json, JSONModelError *err) {
-       // [HUD hideUIBlockingIndicator];
+
         NSLog(@"'%@' request finished.",apiName);
         
         id data;
         if (json) {
             
             NSLog(@"Json: %@",json);
-
-//            id repairedJson = [RequestConnection repairReturnedResponse:json];
-//            data = [[responseClass alloc] initWithDictionary:repairedJson error:nil];
             
             data = [[responseClass alloc] initWithDictionary:json error:nil];
 
@@ -51,38 +48,15 @@
     }];
 }
 
-+ (NSString*) repairReturnedResponse: (NSString*) response {
++(void) dummy:(id) dic andResponseClass:(id) responseClass  {
     
-    // convert to mutable string
+    id data = [[responseClass alloc] initWithDictionary:dic error:nil];
     
-    NSString *jsonString = [NSString stringWithFormat:@"%@", response];
-    
-    // replace un wanted key
-    
-    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"im:id" withString:@"imid"];
-    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"im:bundleId" withString:@"imbundleId"];
-    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"im:name" withString:@"imname"];
-    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"im:image" withString:@"imimage"];
-    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"im:price" withString:@"imprice"];
-    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"im:contentType" withString:@"imcontentType"];
-    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"im:artist" withString:@"imartist"];
-    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"im:releaseDate" withString:@"imreleaseDate"];
+    NSLog(data);
 
-    // convert nsstring back to nsdictionary.
-    
-//    NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-//    id repairedJson = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-//    
-//    NSError* error;
-//    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
-//                                                         options:kNilOptions
-//                                                           error:&error];
-//    
-    
- 
-    
-    return jsonString;
 }
+
+
 
 
 

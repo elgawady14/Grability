@@ -154,7 +154,7 @@
             </objects>
             <point key="canvasLocation" x="1994" y="147"/>
         </scene>
-        <!--Category Name-->
+        <!--Apps List-->
         <scene sceneID="zTM-Hw-dVr">
             <objects>
                 <viewController id="YXf-Dy-CEA" customClass="AppsListView" customModule="Grability" customModuleProvider="target" sceneMemberID="viewController">
@@ -265,7 +265,7 @@
                             <constraint firstAttribute="trailing" secondItem="t8Z-Ok-MEQ" secondAttribute="trailing" constant="20" id="z1T-WH-BIy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Category Name" id="zbC-eZ-Qqy"/>
+                    <navigationItem key="navigationItem" title="Apps List" id="zbC-eZ-Qqy"/>
                     <connections>
                         <outlet property="collectionViewAppsList" destination="t8Z-Ok-MEQ" id="MBa-rO-5Yv"/>
                         <segue destination="ff4-To-HpA" kind="show" identifier="goToAppSummary" id="bqN-tJ-8iV"/>
