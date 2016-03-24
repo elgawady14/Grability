@@ -38,12 +38,68 @@ class SplashView: BaseViewController {
     
     func preSettings () {
         
-        // hide this control temporarily
+        // check internet connection.
+        
+        checkInternetStatus()
+    }
+    
+    func checkInternetStatus() {
+        
+        // hide those controls temporarily
         
         self.buttonContinue.hidden = true
-       
-        // set timer to animate page control
+        self.pageControl.hidden = true
+
         
+        if !Utils.isConnectedToNetwork() {
+            
+            if !Utils.checkCachedDataExist() {
+                
+                SharedData.sharedObj.connectionState = "OffLineNotCached"
+                
+                PXAlertView.showAlertWithTitle("Warning ⚠️", message: "You're not connected to internet. No cached data founded so you should check your internet connection!", cancelTitle: "OK ☑️", completion: {(cancelled: Bool, buttonIndex: Int) -> Void in
+                    
+                    if cancelled {
+                        
+                        // fire a timer to animate progrss bar.
+                        
+                        self.fireTimer()
+                    }
+                })
+                
+            } else {
+                
+                SharedData.sharedObj.connectionState = "OffLineCached"
+                
+                PXAlertView.showAlertWithTitle("Info ⚠️", message: "You're not connected to internet but the app will use the cached data. ", cancelTitle: "OK ☑️", completion: {(cancelled: Bool, buttonIndex: Int) -> Void in
+                    
+                    if cancelled {
+                        
+                        // fire a timer to animate progrss bar.
+                        
+                        self.fireTimer()
+                    }
+                })
+
+            }
+            
+        } else {
+            
+            SharedData.sharedObj.connectionState = "OnLine"
+            
+            // fire a timer to animate progrss bar.
+            
+            self.fireTimer()
+        }
+        
+        
+    }
+    
+    func fireTimer() {
+        
+        self.pageControl.hidden = false
+
+        // set timer to animate page control
         NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("UpdateLoading"), userInfo: nil, repeats: true)
     }
     
@@ -61,26 +117,9 @@ class SplashView: BaseViewController {
                 
                 if self.currentPage == 5 {
                             
-                    if !Utils.isConnectedToNetwork() {
-                        
-                        if !Utils.checkCachedDataExist() {
 
-                            Utils.showAlertDialogInView(withTilte: "Warning ⚠️", andMessage: "You're not connected to internet. No cached data founded so you should check your internet connection!", andButtonTitle: "OK ☑️")
-                            SharedData.sharedObj.connectionState = "OffLineNotCached"
-
-                        } else {
-                            
-                            Utils.showAlertDialogInView(withTilte: "Info ⚠️", andMessage: "You're not connected to internet but the app will use the cached data. ", andButtonTitle: "OK ☑️")
-                            SharedData.sharedObj.connectionState = "OffLineCached"
-                        }
-                        
-                    } else {
-                        
-                        SharedData.sharedObj.connectionState = "OnLine"
-                    }
-                    
                     self.buttonContinue.hidden = false
-                    
+
                 }
         })
         
