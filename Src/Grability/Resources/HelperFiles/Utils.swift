@@ -19,17 +19,6 @@ class Utils: NSObject {
     }
     
     
-//    class func screenSize () -> CGSize {
-//        
-//        let screenSize = UIScreen.mainScreen().bounds.size
-//        if ((NSFoundationVersionNumber <= NSFoundationVersionNumber_iOS_7_1) && UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication().statusBarOrientation)) {
-//            
-//            return CGSizeMake(screenSize.height, screenSize.width)
-//        }
-//        
-//        return screenSize
-//    }
-    
     class func isConnectedToNetwork() -> Bool {
         var zeroAddress = sockaddr_in()
         zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
@@ -83,12 +72,5 @@ class Utils: NSObject {
         }
     
     }
-    
-
-    
-
-
-    
-    
 
 }

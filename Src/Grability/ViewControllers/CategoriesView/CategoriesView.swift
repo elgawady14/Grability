@@ -47,7 +47,7 @@ class CategoriesView: BaseViewController {
         self.view.bringSubviewToFront(activityIndCategories)
         
         if SharedData.sharedObj.connectionState != "OffLineNotCached" {
-            
+        
             // start animating the indicator, then make connection to get all categories
             
             activityIndCategories.startAnimating()
@@ -162,6 +162,39 @@ class CategoriesView: BaseViewController {
                 destinationVC.passedCategoryName = categoriesList[selectedCategoryIndex!]
             }
         }
+    }
+    
+    // layout
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
+        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
+            
+            // to view the collectionview as a list,
+            
+            return CGSizeMake(collectionView.frame.width, 65)
+
+        } else if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            
+            // to view the collectionview as a grid.
+
+            return CGSizeMake(140, 65)
+            
+        } else {
+            
+            // unspecified.
+            
+            return CGSizeZero
+        }
+    }
+    
+    override func viewWillLayoutSubviews() {
+        
+        super.viewWillLayoutSubviews()
+        
+        // we don't want additional animations brought by performBatchUpdates:completion:
+        
+        self.collectionViewCategories.collectionViewLayout.invalidateLayout()
     }
     
 }

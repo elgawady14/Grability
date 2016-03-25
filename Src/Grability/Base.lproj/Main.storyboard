@@ -83,25 +83,25 @@
                                 <rect key="frame" x="20" y="99" width="560" height="479"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="E4U-ZU-Nm9">
-                                    <size key="itemSize" width="267" height="65"/>
+                                    <size key="itemSize" width="140" height="65"/>
                                     <size key="headerReferenceSize" width="50" height="15"/>
                                     <size key="footerReferenceSize" width="50" height="15"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="BW0-qt-IhC" customClass="CategoryCell" customModule="Grability" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="15" width="267" height="65"/>
+                                        <rect key="frame" x="0.0" y="15" width="140" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="267" height="65"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfY-H2-rak">
-                                                    <rect key="frame" x="10" y="0.0" width="247" height="65"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Networking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfY-H2-rak">
+                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="65"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="65" id="bgJ-ZI-y9m"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -109,11 +109,12 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="HfY-H2-rak" secondAttribute="trailing" constant="10" id="9C0-1S-ReR"/>
+                                            <constraint firstAttribute="trailing" secondItem="HfY-H2-rak" secondAttribute="trailing" id="9C0-1S-ReR"/>
                                             <constraint firstItem="HfY-H2-rak" firstAttribute="top" secondItem="BW0-qt-IhC" secondAttribute="top" id="efM-cv-tXs"/>
-                                            <constraint firstItem="HfY-H2-rak" firstAttribute="leading" secondItem="BW0-qt-IhC" secondAttribute="leading" constant="10" id="lTx-Zm-yck"/>
+                                            <constraint firstItem="HfY-H2-rak" firstAttribute="leading" secondItem="BW0-qt-IhC" secondAttribute="leading" id="lTx-Zm-yck"/>
                                             <constraint firstAttribute="bottom" secondItem="HfY-H2-rak" secondAttribute="bottom" id="xrL-eN-Bor"/>
                                         </constraints>
+                                        <size key="customSize" width="140" height="65"/>
                                         <connections>
                                             <outlet property="labelCategoryName" destination="HfY-H2-rak" id="ZkR-ZT-Tts"/>
                                         </connections>
@@ -137,14 +138,14 @@
                         <constraints>
                             <constraint firstItem="pL7-95-1ox" firstAttribute="centerX" secondItem="Nbe-fU-p5c" secondAttribute="centerX" id="0QW-Em-Oeb"/>
                             <constraint firstItem="CZP-fU-L0n" firstAttribute="top" secondItem="Iqj-kh-ugp" secondAttribute="bottom" constant="19" id="3XF-xl-Da0"/>
+                            <constraint firstItem="gCC-0M-vPa" firstAttribute="leading" secondItem="CZP-fU-L0n" secondAttribute="leading" constant="20" id="9Kf-wH-vyx"/>
                             <constraint firstItem="CZP-fU-L0n" firstAttribute="leading" secondItem="Nbe-fU-p5c" secondAttribute="leading" id="9gh-pe-cTL"/>
-                            <constraint firstItem="gCC-0M-vPa" firstAttribute="leading" secondItem="Nbe-fU-p5c" secondAttribute="leading" constant="20" id="Iv2-dh-Pff"/>
-                            <constraint firstItem="XvS-pH-mkM" firstAttribute="top" secondItem="gCC-0M-vPa" secondAttribute="bottom" constant="22" id="P7l-gt-fmM"/>
+                            <constraint firstItem="gCC-0M-vPa" firstAttribute="top" secondItem="CZP-fU-L0n" secondAttribute="top" constant="16" id="A75-p5-Rbr"/>
                             <constraint firstAttribute="trailing" secondItem="CZP-fU-L0n" secondAttribute="trailing" id="R7U-7X-5JS"/>
                             <constraint firstItem="pL7-95-1ox" firstAttribute="centerY" secondItem="Nbe-fU-p5c" secondAttribute="centerY" id="ThN-da-VaP"/>
+                            <constraint firstItem="gCC-0M-vPa" firstAttribute="trailing" secondItem="CZP-fU-L0n" secondAttribute="trailing" constant="-20" id="WDh-GC-uWz"/>
                             <constraint firstItem="XvS-pH-mkM" firstAttribute="top" secondItem="CZP-fU-L0n" secondAttribute="bottom" constant="8" id="WiT-9B-wyn"/>
-                            <constraint firstAttribute="trailing" secondItem="gCC-0M-vPa" secondAttribute="trailing" constant="20" id="plp-mI-Ygt"/>
-                            <constraint firstItem="gCC-0M-vPa" firstAttribute="top" secondItem="Iqj-kh-ugp" secondAttribute="bottom" constant="35" id="xZe-Xe-Jzn"/>
+                            <constraint firstItem="gCC-0M-vPa" firstAttribute="bottom" secondItem="CZP-fU-L0n" secondAttribute="bottom" constant="-14" id="i0u-GD-WkL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="     All Categories" id="Rcv-Bl-Mgq"/>
