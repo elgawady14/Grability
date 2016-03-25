@@ -58,8 +58,7 @@ class CategoriesView: BaseViewController {
             
             // offline and not cached.
             
-            Utils.showAlertDialogInView(withTilte: "Warning ⚠️", andMessage: "You're not connected to internet. No cached data founded so you should check your internet connection!", andButtonTitle: "OK ☑️")
-            
+            Utils.showAlertDialogInView(withTilte: "Warning ⚠️", andMessage: "You haven't internet connection. No cached data found so try to check your internet connection!", andButtonTitle: "OK ☑️")
         }
 
     }

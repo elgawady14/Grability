@@ -63,7 +63,7 @@
         <!--     All Categories-->
         <scene sceneID="INc-UO-wPl">
             <objects>
-                <viewController storyboardIdentifier="CategoriesView" id="wvZ-3M-3BU" customClass="CategoriesView" customModule="Grability" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoriesView" modalTransitionStyle="flipHorizontal" id="wvZ-3M-3BU" customClass="CategoriesView" customModule="Grability" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Iqj-kh-ugp"/>
                         <viewControllerLayoutGuide type="bottom" id="XvS-pH-mkM"/>
@@ -77,11 +77,11 @@
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="pL7-95-1ox">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
-                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="color" red="0.0" green="0.41176470590000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gCC-0M-vPa">
                                 <rect key="frame" x="20" y="99" width="560" height="479"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="E4U-ZU-Nm9">
                                     <size key="itemSize" width="140" height="65"/>
                                     <size key="headerReferenceSize" width="50" height="15"/>
@@ -102,7 +102,7 @@
                                                         <constraint firstAttribute="height" constant="65" id="bgJ-ZI-y9m"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="0.0" green="0.41179237369999999" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -428,7 +428,6 @@
                                             <constraint firstAttribute="trailing" secondItem="xX4-mk-9DQ" secondAttribute="trailing" constant="8" id="ZP9-ak-JBj"/>
                                             <constraint firstItem="mfK-RS-ENG" firstAttribute="leading" secondItem="oVi-1E-a2e" secondAttribute="leading" constant="8" id="aCq-wf-CBp"/>
                                             <constraint firstItem="e2l-F6-aze" firstAttribute="leading" secondItem="oVi-1E-a2e" secondAttribute="leading" constant="8" id="ava-3x-wKH"/>
-                                            <constraint firstItem="PYL-0M-oOY" firstAttribute="top" secondItem="oVi-1E-a2e" secondAttribute="top" constant="87" id="cRH-ib-hBz"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mfK-RS-ENG" secondAttribute="bottom" constant="72" id="ckU-Xc-gTO"/>
                                             <constraint firstItem="Wr8-CU-XcV" firstAttribute="leading" secondItem="tJC-da-CQv" secondAttribute="trailing" constant="17" id="dDM-Gt-uLt"/>
                                             <constraint firstAttribute="trailing" secondItem="I1G-Yp-Iob" secondAttribute="trailing" constant="8" id="fbi-MB-L0R"/>
@@ -450,11 +449,6 @@
                                             <constraint firstAttribute="trailing" secondItem="Wr8-CU-XcV" secondAttribute="trailing" constant="8" id="vZU-cq-r3h"/>
                                             <constraint firstItem="tJC-da-CQv" firstAttribute="leading" secondItem="oVi-1E-a2e" secondAttribute="leading" constant="8" id="yg8-RW-Y7e"/>
                                         </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="cRH-ib-hBz"/>
-                                            </mask>
-                                        </variation>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -472,14 +466,8 @@
                             <constraint firstItem="Zjg-s7-fSE" firstAttribute="top" secondItem="0rL-nq-65V" secondAttribute="bottom" id="Joe-2F-DPT"/>
                             <constraint firstAttribute="trailing" secondItem="0rL-nq-65V" secondAttribute="trailing" id="fzb-ZV-12s"/>
                             <constraint firstItem="oVi-1E-a2e" firstAttribute="height" secondItem="Ufs-5b-ypP" secondAttribute="height" priority="250" constant="-64" id="kTA-0U-pKf"/>
-                            <constraint firstItem="ldj-Ty-GaL" firstAttribute="top" secondItem="fyB-nT-CXS" secondAttribute="bottom" constant="23" id="ncf-oe-SWh"/>
                             <constraint firstItem="oVi-1E-a2e" firstAttribute="width" secondItem="Ufs-5b-ypP" secondAttribute="width" id="pmf-rZ-LxM"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="ncf-oe-SWh"/>
-                            </mask>
-                        </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="App Summary" id="6eo-1n-Ep2"/>
@@ -502,7 +490,7 @@
         <!--Navigation Controller-->
         <scene sceneID="67m-Fd-7xA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9uB-gE-rfX" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="9uB-gE-rfX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="C69-Wa-Doe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

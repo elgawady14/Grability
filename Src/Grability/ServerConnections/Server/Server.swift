@@ -77,7 +77,7 @@ class Server: NSObject {
                 
                 if response != nil {
                     
-                    // check if cached data not founded, save new one.
+                    // check if cached data not found, save new one.
                     
                     self.checkCachedData(response.toDictionary())
                     

@@ -48,21 +48,13 @@ class SplashView: BaseViewController {
                 
                 SharedData.sharedObj.connectionState = "OffLineNotCached"
                 
-                PXAlertView.showAlertWithTitle("Warning ⚠️", message: "You're not connected to internet. No cached data founded so you should check your internet connection!", cancelTitle: "OK ☑️", completion: {(cancelled: Bool, buttonIndex: Int) -> Void in
-                    
-                    if cancelled {
-                        
-                        // fire a timer to animate progrss bar.
-                        
-                        self.fireTimer()
-                    }
-                })
-                
+                self.fireTimer()
+
             } else {
                 
                 SharedData.sharedObj.connectionState = "OffLineCached"
                 
-                PXAlertView.showAlertWithTitle("Info ⚠️", message: "You're not connected to internet but the app will use the cached data. ", cancelTitle: "OK ☑️", completion: {(cancelled: Bool, buttonIndex: Int) -> Void in
+                PXAlertView.showAlertWithTitle("Info 😃", message: "You haven't internet connection but the app found data cached before. :)", cancelTitle: "OK ☑️", completion: {(cancelled: Bool, buttonIndex: Int) -> Void in
                     
                     if cancelled {
                         
@@ -98,7 +90,12 @@ class SplashView: BaseViewController {
         
         self.currentProgressValue += 0.2
         
-        self.progressBar.progress = self.currentProgressValue
+        
+        UIView.animateWithDuration(1, animations: {() -> Void in
+            
+            self.progressBar.setProgress(self.currentProgressValue, animated: true)
+
+        })
 
         if self.currentProgressValue == 1 {
             
@@ -106,8 +103,6 @@ class SplashView: BaseViewController {
             self.performSegueWithIdentifier("goToCategoriesView", sender: self)
             
         }
-
-        
     }
     
 

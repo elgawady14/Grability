@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController, RequestDelegate {
+class BaseViewController: UIViewController, RequestDelegate, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
 
     var delegate: RequestDelegate?
     
@@ -16,7 +16,7 @@ class BaseViewController: UIViewController, RequestDelegate {
     
     var server: Server? = Server()
     
-    // Do any additional setup after loading the view.
+    let myNavigationAnimationController = MyNavigationAnimationController()
 
     override func viewDidLoad() {
         
@@ -30,10 +30,19 @@ class BaseViewController: UIViewController, RequestDelegate {
         // set up nav bar.
         
         let attributes = [
-            NSForegroundColorAttributeName: UIColor.darkGrayColor(),
+            NSForegroundColorAttributeName: COLOR_DARK_Green,
             NSFontAttributeName: UIFont.systemFontOfSize(15, weight: 1)
         ]
         self.navigationController?.navigationBar.titleTextAttributes = attributes
         self.navigationController?.navigationBar.tintColor = UIColor.darkGrayColor()
+        
+        navigationController?.delegate = self
+
+    }
+    
+    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        myNavigationAnimationController.reverse = operation == .Pop
+        return myNavigationAnimationController
     }
 }

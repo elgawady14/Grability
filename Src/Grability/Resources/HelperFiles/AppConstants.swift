@@ -8,25 +8,10 @@
 
 import Foundation
 
-let API_URL: String = "https://itunes.apple.com/us/rss/topfreeapplications/limit=20/json"
-
-// Familiar keywords
-
-let DATA: String = "data"
-
 // API Names
 
 let API_Name_TOP_FREE_APPS: String = "TopFreeApplications"
 
-// API MESSAGES
-
-let SUCCESS: String = "success"
-
-// User Credentials
-
-let loggedInUser = NSUserDefaults.standardUserDefaults().valueForKey("user")
-
 // COLORS
 
-let COLOR_DARK = UIColor.blackColor()
-let COLOR_DARK_RED = UIColor(red: 179/255, green: 19/255, blue: 35/255, alpha: 1)
+let COLOR_DARK_Green = UIColor(red: 0.0, green: 105.0/255.0, blue: 76.0/255.0, alpha: 1.0)

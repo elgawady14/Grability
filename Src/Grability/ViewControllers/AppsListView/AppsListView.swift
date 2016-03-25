@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppsListView: BaseViewController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
+class AppsListView: BaseViewController {
     
     
     //MARK:- UI CONTROLS
@@ -26,9 +26,7 @@ class AppsListView: BaseViewController, UIViewControllerTransitioningDelegate, U
     // keep user app selection
     
     var selectedAppIndex: Int?
-    
-    let myNavigationAnimationController = MyNavigationAnimationController()
-    
+        
     //MARK:- VIEW ACTIONS
     
     override func viewDidLoad() {
@@ -74,14 +72,8 @@ class AppsListView: BaseViewController, UIViewControllerTransitioningDelegate, U
         
         self.title = passedCategoryName
         
-        navigationController?.delegate = self
-
-        
     }
         
-    
-    
-    
     //MARK:- collection view data source
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -147,11 +139,4 @@ class AppsListView: BaseViewController, UIViewControllerTransitioningDelegate, U
             }
         }
     }
-    
-    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
-        myNavigationAnimationController.reverse = operation == .Pop
-        return myNavigationAnimationController
-    }
-    
 }
