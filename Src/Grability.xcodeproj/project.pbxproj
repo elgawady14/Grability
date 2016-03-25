@@ -62,6 +62,7 @@
 		844A6B8C1C9DE0F1007B4DAF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B8B1C9DE0F1007B4DAF /* BaseViewController.swift */; };
 		844A6B8F1C9DE16C007B4DAF /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B8E1C9DE16C007B4DAF /* SharedData.swift */; };
 		844A6B931C9DF0C7007B4DAF /* Link.m in Sources */ = {isa = PBXBuildFile; fileRef = 844A6B921C9DF0C7007B4DAF /* Link.m */; };
+		8477AB651CA599A900F202A4 /* MyNavigationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477AB641CA599A900F202A4 /* MyNavigationAnimationController.swift */; };
 		84991C131C9F284A00C232DD /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84991C121C9F284A00C232DD /* CategoriesView.swift */; };
 		84991C161C9F38B400C232DD /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84991C151C9F38B400C232DD /* CategoryCell.swift */; };
 		84991C181C9F40F800C232DD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84991C171C9F40F800C232DD /* Utils.swift */; };
@@ -188,6 +189,7 @@
 		844A6B8E1C9DE16C007B4DAF /* SharedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		844A6B911C9DF0C7007B4DAF /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
 		844A6B921C9DF0C7007B4DAF /* Link.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Link.m; sourceTree = "<group>"; };
+		8477AB641CA599A900F202A4 /* MyNavigationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationAnimationController.swift; sourceTree = "<group>"; };
 		84991C121C9F284A00C232DD /* CategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		84991C151C9F38B400C232DD /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		84991C171C9F40F800C232DD /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 		844A6B031C9D7D3B007B4DAF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8477AB631CA5999500F202A4 /* MyNavigationAnimationController */,
 				8422C7A11CA1D50B007542F4 /* AppSummary */,
 				84BF6A7A1CA0751200ED67AE /* AppsListView */,
 				84991C111C9F255900C232DD /* CategoriesView */,
@@ -587,6 +590,14 @@
 			path = Link;
 			sourceTree = "<group>";
 		};
+		8477AB631CA5999500F202A4 /* MyNavigationAnimationController */ = {
+			isa = PBXGroup;
+			children = (
+				8477AB641CA599A900F202A4 /* MyNavigationAnimationController.swift */,
+			);
+			path = MyNavigationAnimationController;
+			sourceTree = "<group>";
+		};
 		84991C111C9F255900C232DD /* CategoriesView */ = {
 			isa = PBXGroup;
 			children = (
@@ -806,6 +817,7 @@
 				84BF6A7C1CA0755600ED67AE /* AppsListView.swift in Sources */,
 				844A6B661C9D7E11007B4DAF /* UIImageView+WebCache.m in Sources */,
 				844A6B831C9DAD01007B4DAF /* Feed.m in Sources */,
+				8477AB651CA599A900F202A4 /* MyNavigationAnimationController.swift in Sources */,
 				844A6B671C9D7E11007B4DAF /* UIView+WebCacheOperation.m in Sources */,
 				844A6B5F1C9D7E11007B4DAF /* SDWebImageManager.m in Sources */,
 				844A6B4F1C9D7E11007B4DAF /* NSArray+JSONModel.m in Sources */,

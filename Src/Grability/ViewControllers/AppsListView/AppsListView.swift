@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppsListView: BaseViewController {
+class AppsListView: BaseViewController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
     
     
     //MARK:- UI CONTROLS
@@ -26,6 +26,8 @@ class AppsListView: BaseViewController {
     // keep user app selection
     
     var selectedAppIndex: Int?
+    
+    let myNavigationAnimationController = MyNavigationAnimationController()
     
     //MARK:- VIEW ACTIONS
     
@@ -46,6 +48,7 @@ class AppsListView: BaseViewController {
         getSelectedCategoryApps()
         
         setupNavigationBar()
+        
     }
     
     func getSelectedCategoryApps() {
@@ -70,6 +73,9 @@ class AppsListView: BaseViewController {
         // set nav bar title.
         
         self.title = passedCategoryName
+        
+        navigationController?.delegate = self
+
         
     }
         
@@ -140,6 +146,12 @@ class AppsListView: BaseViewController {
                 destinationVC.selectedApp = entryList[selectedAppIndex!]
             }
         }
+    }
+    
+    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        myNavigationAnimationController.reverse = operation == .Pop
+        return myNavigationAnimationController
     }
     
 }
