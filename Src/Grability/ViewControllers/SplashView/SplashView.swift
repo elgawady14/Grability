@@ -12,19 +12,11 @@ class SplashView: BaseViewController {
     
     // UI controls
     
-    @IBOutlet var pageControl: UIPageControl!
-    @IBOutlet var buttonContinue: UIButton!
-    
-    // would been used in show/hide according to user status.
-    
-//    @IBOutlet var buttonRegister: UIButton!
-//    @IBOutlet var buttonLogin: UIButton!
-//    @IBOutlet var buttonSkip: UIButton!
-//    @IBOutlet var viewGray: UIImageView!
+    @IBOutlet var progressBar: UIProgressView!
     
     // refer to page control index
     
-    var currentPage = 0
+    var currentProgressValue: Float = 0.0
     
     
     override func viewDidLoad() {
@@ -45,10 +37,9 @@ class SplashView: BaseViewController {
     
     func checkInternetStatus() {
         
-        // hide those controls temporarily
+        // hide this control temporarily
         
-        self.buttonContinue.hidden = true
-        self.pageControl.hidden = true
+        self.progressBar.hidden = true
 
         
         if !Utils.isConnectedToNetwork() {
@@ -97,7 +88,7 @@ class SplashView: BaseViewController {
     
     func fireTimer() {
         
-        self.pageControl.hidden = false
+        self.progressBar.hidden = false
 
         // set timer to animate page control
         NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("UpdateLoading"), userInfo: nil, repeats: true)
@@ -105,32 +96,18 @@ class SplashView: BaseViewController {
     
     func UpdateLoading () {
         
-        // make animation when update page control index
+        self.currentProgressValue += 0.2
         
-        UIView.animateWithDuration(0.3, animations: {
-            
-            self.pageControl.currentPage = self.currentPage
-            self.currentPage++
-            
-            }, completion: {
-                (finished: Bool) in
-                
-                if self.currentPage == 5 {
-                            
+        self.progressBar.progress = self.currentProgressValue
 
-                    self.buttonContinue.hidden = false
+        if self.currentProgressValue == 1 {
+            
+            // navigate to register page
+            self.performSegueWithIdentifier("goToCategoriesView", sender: self)
+            
+        }
 
-                }
-        })
         
-        
-    }
-    
-    @IBAction func actionContinue (sender: UIButton) {
-        
-        // navigate to register page
-        
-        self.performSegueWithIdentifier("goToCategoriesView", sender: self)
     }
     
 
