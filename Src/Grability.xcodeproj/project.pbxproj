@@ -68,6 +68,7 @@
 		84BD2E691CA0881500A27771 /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD2E681CA0881500A27771 /* AppCell.swift */; };
 		84BD2E6B1CA08A4000A27771 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BD2E6A1CA08A4000A27771 /* placeholder.png */; };
 		84BF6A7C1CA0755600ED67AE /* AppsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF6A7B1CA0755600ED67AE /* AppsListView.swift */; };
+		84F775101CA5CC4E00533187 /* logo_gray.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84F7750F1CA5CC4E00533187 /* logo_gray.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,6 +195,7 @@
 		84BD2E681CA0881500A27771 /* AppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
 		84BD2E6A1CA08A4000A27771 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		84BF6A7B1CA0755600ED67AE /* AppsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsListView.swift; sourceTree = "<group>"; };
+		84F7750F1CA5CC4E00533187 /* logo_gray.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo_gray.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -395,6 +397,7 @@
 		844A6B071C9D7D9B007B4DAF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				84F7750F1CA5CC4E00533187 /* logo_gray.jpg */,
 				8422C79D1CA1B67E007542F4 /* AppsListBGImg.png */,
 				84BD2E6A1CA08A4000A27771 /* placeholder.png */,
 				844A6B6C1C9D8021007B4DAF /* logo.jpg */,
@@ -743,6 +746,7 @@
 				844A6B561C9D7E11007B4DAF /* LICENSE.txt in Resources */,
 				84BD2E6B1CA08A4000A27771 /* placeholder.png in Resources */,
 				844A6B6D1C9D8021007B4DAF /* logo.jpg in Resources */,
+				84F775101CA5CC4E00533187 /* logo_gray.jpg in Resources */,
 				844A6AD51C9D7369007B4DAF /* Main.storyboard in Resources */,
 				844A6B681C9D7E11007B4DAF /* UIActivityIndicator-for-SDWebImage.podspec in Resources */,
 			);

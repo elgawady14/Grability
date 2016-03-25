@@ -32,7 +32,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="S45-Ia-P3B">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_gray.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="S45-Ia-P3B">
                                 <rect key="frame" x="258" y="195" width="84" height="72"/>
                                 <color key="backgroundColor" red="0.16862745098039217" green="0.53725490196078429" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -58,6 +58,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo.jpg" width="160" height="160"/>
+        <image name="logo_gray.jpg" width="160" height="160"/>
     </resources>
 </document>
